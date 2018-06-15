@@ -1,0 +1,36 @@
+type User {
+    id: ID! @unique
+    email: String!
+    password: String!
+    bet: Bet
+}
+
+type Country {
+    id: ID! @unique
+    name: String!
+    flag: String!
+}
+
+type Player {
+    id: ID! @unique
+    name: String!
+}
+
+type CountriesList {
+    id: ID! @unique
+    name: String!
+    countries: [Country!]!
+}
+
+type Bet {
+    id: ID! @unique
+    topGoalScorer: Player! @relation(name: "TopGoalScorer")
+    secondGoalScorer: Player! @relation(name: "SecondGoalScorer")
+    round16: CountriesList! @relation(name: "Round16")
+    round8: CountriesList! @relation(name: "Round8")
+    round4: CountriesList! @relation(name: "Round4")
+    round2: CountriesList! @relation(name: "Round2")
+    final: CountriesList! @relation(name: "Final")
+    third: CountriesList! @relation(name: "Third")
+    winner: CountriesList! @relation(name: "Winner")
+}

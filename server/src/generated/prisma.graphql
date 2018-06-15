@@ -1,0 +1,1233 @@
+# source: https://eu1.prisma.sh/jesus-chacon/world-cap-bet-2018/dev
+# timestamp: Fri Jun 15 2018 20:33:59 GMT+0200 (CEST)
+
+type AggregateBet {
+  count: Int!
+}
+
+type AggregateCountriesList {
+  count: Int!
+}
+
+type AggregateCountry {
+  count: Int!
+}
+
+type AggregatePlayer {
+  count: Int!
+}
+
+type AggregateUser {
+  count: Int!
+}
+
+type BatchPayload {
+  """The number of nodes that have been affected by the Batch operation."""
+  count: Long!
+}
+
+type Bet implements Node {
+  id: ID!
+  topGoalScorer(where: PlayerWhereInput): Player!
+  secondGoalScorer(where: PlayerWhereInput): Player!
+  round16(where: CountriesListWhereInput): CountriesList!
+  round8(where: CountriesListWhereInput): CountriesList!
+  round4(where: CountriesListWhereInput): CountriesList!
+  round2(where: CountriesListWhereInput): CountriesList!
+  final(where: CountriesListWhereInput): CountriesList!
+  third(where: CountriesListWhereInput): CountriesList!
+  winner(where: CountriesListWhereInput): CountriesList!
+}
+
+"""A connection to a list of items."""
+type BetConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [BetEdge]!
+  aggregate: AggregateBet!
+}
+
+input BetCreateInput {
+  topGoalScorer: PlayerCreateOneInput!
+  secondGoalScorer: PlayerCreateOneInput!
+  round16: CountriesListCreateOneInput!
+  round8: CountriesListCreateOneInput!
+  round4: CountriesListCreateOneInput!
+  round2: CountriesListCreateOneInput!
+  final: CountriesListCreateOneInput!
+  third: CountriesListCreateOneInput!
+  winner: CountriesListCreateOneInput!
+}
+
+input BetCreateOneInput {
+  create: BetCreateInput
+  connect: BetWhereUniqueInput
+}
+
+"""An edge in a connection."""
+type BetEdge {
+  """The item at the end of the edge."""
+  node: Bet!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum BetOrderByInput {
+  id_ASC
+  id_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type BetPreviousValues {
+  id: ID!
+}
+
+type BetSubscriptionPayload {
+  mutation: MutationType!
+  node: Bet
+  updatedFields: [String!]
+  previousValues: BetPreviousValues
+}
+
+input BetSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [BetSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [BetSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [BetSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: BetWhereInput
+}
+
+input BetUpdateDataInput {
+  topGoalScorer: PlayerUpdateOneInput
+  secondGoalScorer: PlayerUpdateOneInput
+  round16: CountriesListUpdateOneInput
+  round8: CountriesListUpdateOneInput
+  round4: CountriesListUpdateOneInput
+  round2: CountriesListUpdateOneInput
+  final: CountriesListUpdateOneInput
+  third: CountriesListUpdateOneInput
+  winner: CountriesListUpdateOneInput
+}
+
+input BetUpdateInput {
+  topGoalScorer: PlayerUpdateOneInput
+  secondGoalScorer: PlayerUpdateOneInput
+  round16: CountriesListUpdateOneInput
+  round8: CountriesListUpdateOneInput
+  round4: CountriesListUpdateOneInput
+  round2: CountriesListUpdateOneInput
+  final: CountriesListUpdateOneInput
+  third: CountriesListUpdateOneInput
+  winner: CountriesListUpdateOneInput
+}
+
+input BetUpdateOneInput {
+  create: BetCreateInput
+  connect: BetWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: BetUpdateDataInput
+  upsert: BetUpsertNestedInput
+}
+
+input BetUpsertNestedInput {
+  update: BetUpdateDataInput!
+  create: BetCreateInput!
+}
+
+input BetWhereInput {
+  """Logical AND on all given filters."""
+  AND: [BetWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [BetWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [BetWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  topGoalScorer: PlayerWhereInput
+  secondGoalScorer: PlayerWhereInput
+  round16: CountriesListWhereInput
+  round8: CountriesListWhereInput
+  round4: CountriesListWhereInput
+  round2: CountriesListWhereInput
+  final: CountriesListWhereInput
+  third: CountriesListWhereInput
+  winner: CountriesListWhereInput
+}
+
+input BetWhereUniqueInput {
+  id: ID
+}
+
+type CountriesList implements Node {
+  id: ID!
+  name: String!
+  countries(where: CountryWhereInput, orderBy: CountryOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Country!]
+}
+
+"""A connection to a list of items."""
+type CountriesListConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [CountriesListEdge]!
+  aggregate: AggregateCountriesList!
+}
+
+input CountriesListCreateInput {
+  name: String!
+  countries: CountryCreateManyInput
+}
+
+input CountriesListCreateOneInput {
+  create: CountriesListCreateInput
+  connect: CountriesListWhereUniqueInput
+}
+
+"""An edge in a connection."""
+type CountriesListEdge {
+  """The item at the end of the edge."""
+  node: CountriesList!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum CountriesListOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type CountriesListPreviousValues {
+  id: ID!
+  name: String!
+}
+
+type CountriesListSubscriptionPayload {
+  mutation: MutationType!
+  node: CountriesList
+  updatedFields: [String!]
+  previousValues: CountriesListPreviousValues
+}
+
+input CountriesListSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [CountriesListSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [CountriesListSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [CountriesListSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: CountriesListWhereInput
+}
+
+input CountriesListUpdateDataInput {
+  name: String
+  countries: CountryUpdateManyInput
+}
+
+input CountriesListUpdateInput {
+  name: String
+  countries: CountryUpdateManyInput
+}
+
+input CountriesListUpdateOneInput {
+  create: CountriesListCreateInput
+  connect: CountriesListWhereUniqueInput
+  delete: Boolean
+  update: CountriesListUpdateDataInput
+  upsert: CountriesListUpsertNestedInput
+}
+
+input CountriesListUpsertNestedInput {
+  update: CountriesListUpdateDataInput!
+  create: CountriesListCreateInput!
+}
+
+input CountriesListWhereInput {
+  """Logical AND on all given filters."""
+  AND: [CountriesListWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [CountriesListWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [CountriesListWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  name: String
+
+  """All values that are not equal to given value."""
+  name_not: String
+
+  """All values that are contained in given list."""
+  name_in: [String!]
+
+  """All values that are not contained in given list."""
+  name_not_in: [String!]
+
+  """All values less than the given value."""
+  name_lt: String
+
+  """All values less than or equal the given value."""
+  name_lte: String
+
+  """All values greater than the given value."""
+  name_gt: String
+
+  """All values greater than or equal the given value."""
+  name_gte: String
+
+  """All values containing the given string."""
+  name_contains: String
+
+  """All values not containing the given string."""
+  name_not_contains: String
+
+  """All values starting with the given string."""
+  name_starts_with: String
+
+  """All values not starting with the given string."""
+  name_not_starts_with: String
+
+  """All values ending with the given string."""
+  name_ends_with: String
+
+  """All values not ending with the given string."""
+  name_not_ends_with: String
+  countries_every: CountryWhereInput
+  countries_some: CountryWhereInput
+  countries_none: CountryWhereInput
+}
+
+input CountriesListWhereUniqueInput {
+  id: ID
+}
+
+type Country implements Node {
+  id: ID!
+  name: String!
+  flag: String!
+}
+
+"""A connection to a list of items."""
+type CountryConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [CountryEdge]!
+  aggregate: AggregateCountry!
+}
+
+input CountryCreateInput {
+  name: String!
+  flag: String!
+}
+
+input CountryCreateManyInput {
+  create: [CountryCreateInput!]
+  connect: [CountryWhereUniqueInput!]
+}
+
+"""An edge in a connection."""
+type CountryEdge {
+  """The item at the end of the edge."""
+  node: Country!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum CountryOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  flag_ASC
+  flag_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type CountryPreviousValues {
+  id: ID!
+  name: String!
+  flag: String!
+}
+
+type CountrySubscriptionPayload {
+  mutation: MutationType!
+  node: Country
+  updatedFields: [String!]
+  previousValues: CountryPreviousValues
+}
+
+input CountrySubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [CountrySubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [CountrySubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [CountrySubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: CountryWhereInput
+}
+
+input CountryUpdateDataInput {
+  name: String
+  flag: String
+}
+
+input CountryUpdateInput {
+  name: String
+  flag: String
+}
+
+input CountryUpdateManyInput {
+  create: [CountryCreateInput!]
+  connect: [CountryWhereUniqueInput!]
+  disconnect: [CountryWhereUniqueInput!]
+  delete: [CountryWhereUniqueInput!]
+  update: [CountryUpdateWithWhereUniqueNestedInput!]
+  upsert: [CountryUpsertWithWhereUniqueNestedInput!]
+}
+
+input CountryUpdateWithWhereUniqueNestedInput {
+  where: CountryWhereUniqueInput!
+  data: CountryUpdateDataInput!
+}
+
+input CountryUpsertWithWhereUniqueNestedInput {
+  where: CountryWhereUniqueInput!
+  update: CountryUpdateDataInput!
+  create: CountryCreateInput!
+}
+
+input CountryWhereInput {
+  """Logical AND on all given filters."""
+  AND: [CountryWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [CountryWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [CountryWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  name: String
+
+  """All values that are not equal to given value."""
+  name_not: String
+
+  """All values that are contained in given list."""
+  name_in: [String!]
+
+  """All values that are not contained in given list."""
+  name_not_in: [String!]
+
+  """All values less than the given value."""
+  name_lt: String
+
+  """All values less than or equal the given value."""
+  name_lte: String
+
+  """All values greater than the given value."""
+  name_gt: String
+
+  """All values greater than or equal the given value."""
+  name_gte: String
+
+  """All values containing the given string."""
+  name_contains: String
+
+  """All values not containing the given string."""
+  name_not_contains: String
+
+  """All values starting with the given string."""
+  name_starts_with: String
+
+  """All values not starting with the given string."""
+  name_not_starts_with: String
+
+  """All values ending with the given string."""
+  name_ends_with: String
+
+  """All values not ending with the given string."""
+  name_not_ends_with: String
+  flag: String
+
+  """All values that are not equal to given value."""
+  flag_not: String
+
+  """All values that are contained in given list."""
+  flag_in: [String!]
+
+  """All values that are not contained in given list."""
+  flag_not_in: [String!]
+
+  """All values less than the given value."""
+  flag_lt: String
+
+  """All values less than or equal the given value."""
+  flag_lte: String
+
+  """All values greater than the given value."""
+  flag_gt: String
+
+  """All values greater than or equal the given value."""
+  flag_gte: String
+
+  """All values containing the given string."""
+  flag_contains: String
+
+  """All values not containing the given string."""
+  flag_not_contains: String
+
+  """All values starting with the given string."""
+  flag_starts_with: String
+
+  """All values not starting with the given string."""
+  flag_not_starts_with: String
+
+  """All values ending with the given string."""
+  flag_ends_with: String
+
+  """All values not ending with the given string."""
+  flag_not_ends_with: String
+}
+
+input CountryWhereUniqueInput {
+  id: ID
+}
+
+"""
+The `Long` scalar type represents non-fractional signed whole numeric values.
+Long can represent values between -(2^63) and 2^63 - 1.
+"""
+scalar Long
+
+type Mutation {
+  createUser(data: UserCreateInput!): User!
+  createCountry(data: CountryCreateInput!): Country!
+  createPlayer(data: PlayerCreateInput!): Player!
+  createCountriesList(data: CountriesListCreateInput!): CountriesList!
+  createBet(data: BetCreateInput!): Bet!
+  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
+  updateCountry(data: CountryUpdateInput!, where: CountryWhereUniqueInput!): Country
+  updatePlayer(data: PlayerUpdateInput!, where: PlayerWhereUniqueInput!): Player
+  updateCountriesList(data: CountriesListUpdateInput!, where: CountriesListWhereUniqueInput!): CountriesList
+  updateBet(data: BetUpdateInput!, where: BetWhereUniqueInput!): Bet
+  deleteUser(where: UserWhereUniqueInput!): User
+  deleteCountry(where: CountryWhereUniqueInput!): Country
+  deletePlayer(where: PlayerWhereUniqueInput!): Player
+  deleteCountriesList(where: CountriesListWhereUniqueInput!): CountriesList
+  deleteBet(where: BetWhereUniqueInput!): Bet
+  upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
+  upsertCountry(where: CountryWhereUniqueInput!, create: CountryCreateInput!, update: CountryUpdateInput!): Country!
+  upsertPlayer(where: PlayerWhereUniqueInput!, create: PlayerCreateInput!, update: PlayerUpdateInput!): Player!
+  upsertCountriesList(where: CountriesListWhereUniqueInput!, create: CountriesListCreateInput!, update: CountriesListUpdateInput!): CountriesList!
+  upsertBet(where: BetWhereUniqueInput!, create: BetCreateInput!, update: BetUpdateInput!): Bet!
+  updateManyUsers(data: UserUpdateInput!, where: UserWhereInput): BatchPayload!
+  updateManyCountries(data: CountryUpdateInput!, where: CountryWhereInput): BatchPayload!
+  updateManyPlayers(data: PlayerUpdateInput!, where: PlayerWhereInput): BatchPayload!
+  updateManyCountriesLists(data: CountriesListUpdateInput!, where: CountriesListWhereInput): BatchPayload!
+  updateManyBets(data: BetUpdateInput!, where: BetWhereInput): BatchPayload!
+  deleteManyUsers(where: UserWhereInput): BatchPayload!
+  deleteManyCountries(where: CountryWhereInput): BatchPayload!
+  deleteManyPlayers(where: PlayerWhereInput): BatchPayload!
+  deleteManyCountriesLists(where: CountriesListWhereInput): BatchPayload!
+  deleteManyBets(where: BetWhereInput): BatchPayload!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+type Player implements Node {
+  id: ID!
+  name: String!
+}
+
+"""A connection to a list of items."""
+type PlayerConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [PlayerEdge]!
+  aggregate: AggregatePlayer!
+}
+
+input PlayerCreateInput {
+  name: String!
+}
+
+input PlayerCreateOneInput {
+  create: PlayerCreateInput
+  connect: PlayerWhereUniqueInput
+}
+
+"""An edge in a connection."""
+type PlayerEdge {
+  """The item at the end of the edge."""
+  node: Player!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum PlayerOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type PlayerPreviousValues {
+  id: ID!
+  name: String!
+}
+
+type PlayerSubscriptionPayload {
+  mutation: MutationType!
+  node: Player
+  updatedFields: [String!]
+  previousValues: PlayerPreviousValues
+}
+
+input PlayerSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [PlayerSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [PlayerSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [PlayerSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: PlayerWhereInput
+}
+
+input PlayerUpdateDataInput {
+  name: String
+}
+
+input PlayerUpdateInput {
+  name: String
+}
+
+input PlayerUpdateOneInput {
+  create: PlayerCreateInput
+  connect: PlayerWhereUniqueInput
+  delete: Boolean
+  update: PlayerUpdateDataInput
+  upsert: PlayerUpsertNestedInput
+}
+
+input PlayerUpsertNestedInput {
+  update: PlayerUpdateDataInput!
+  create: PlayerCreateInput!
+}
+
+input PlayerWhereInput {
+  """Logical AND on all given filters."""
+  AND: [PlayerWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [PlayerWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [PlayerWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  name: String
+
+  """All values that are not equal to given value."""
+  name_not: String
+
+  """All values that are contained in given list."""
+  name_in: [String!]
+
+  """All values that are not contained in given list."""
+  name_not_in: [String!]
+
+  """All values less than the given value."""
+  name_lt: String
+
+  """All values less than or equal the given value."""
+  name_lte: String
+
+  """All values greater than the given value."""
+  name_gt: String
+
+  """All values greater than or equal the given value."""
+  name_gte: String
+
+  """All values containing the given string."""
+  name_contains: String
+
+  """All values not containing the given string."""
+  name_not_contains: String
+
+  """All values starting with the given string."""
+  name_starts_with: String
+
+  """All values not starting with the given string."""
+  name_not_starts_with: String
+
+  """All values ending with the given string."""
+  name_ends_with: String
+
+  """All values not ending with the given string."""
+  name_not_ends_with: String
+}
+
+input PlayerWhereUniqueInput {
+  id: ID
+}
+
+type Query {
+  users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
+  countries(where: CountryWhereInput, orderBy: CountryOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Country]!
+  players(where: PlayerWhereInput, orderBy: PlayerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Player]!
+  countriesLists(where: CountriesListWhereInput, orderBy: CountriesListOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [CountriesList]!
+  bets(where: BetWhereInput, orderBy: BetOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Bet]!
+  user(where: UserWhereUniqueInput!): User
+  country(where: CountryWhereUniqueInput!): Country
+  player(where: PlayerWhereUniqueInput!): Player
+  countriesList(where: CountriesListWhereUniqueInput!): CountriesList
+  bet(where: BetWhereUniqueInput!): Bet
+  usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
+  countriesConnection(where: CountryWhereInput, orderBy: CountryOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CountryConnection!
+  playersConnection(where: PlayerWhereInput, orderBy: PlayerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): PlayerConnection!
+  countriesListsConnection(where: CountriesListWhereInput, orderBy: CountriesListOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CountriesListConnection!
+  betsConnection(where: BetWhereInput, orderBy: BetOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BetConnection!
+
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
+}
+
+type Subscription {
+  user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
+  country(where: CountrySubscriptionWhereInput): CountrySubscriptionPayload
+  player(where: PlayerSubscriptionWhereInput): PlayerSubscriptionPayload
+  countriesList(where: CountriesListSubscriptionWhereInput): CountriesListSubscriptionPayload
+  bet(where: BetSubscriptionWhereInput): BetSubscriptionPayload
+}
+
+type User implements Node {
+  id: ID!
+  email: String!
+  password: String!
+  bet(where: BetWhereInput): Bet
+}
+
+"""A connection to a list of items."""
+type UserConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [UserEdge]!
+  aggregate: AggregateUser!
+}
+
+input UserCreateInput {
+  email: String!
+  password: String!
+  bet: BetCreateOneInput
+}
+
+"""An edge in a connection."""
+type UserEdge {
+  """The item at the end of the edge."""
+  node: User!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum UserOrderByInput {
+  id_ASC
+  id_DESC
+  email_ASC
+  email_DESC
+  password_ASC
+  password_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type UserPreviousValues {
+  id: ID!
+  email: String!
+  password: String!
+}
+
+type UserSubscriptionPayload {
+  mutation: MutationType!
+  node: User
+  updatedFields: [String!]
+  previousValues: UserPreviousValues
+}
+
+input UserSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [UserSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [UserSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [UserSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: UserWhereInput
+}
+
+input UserUpdateInput {
+  email: String
+  password: String
+  bet: BetUpdateOneInput
+}
+
+input UserWhereInput {
+  """Logical AND on all given filters."""
+  AND: [UserWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [UserWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [UserWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  email: String
+
+  """All values that are not equal to given value."""
+  email_not: String
+
+  """All values that are contained in given list."""
+  email_in: [String!]
+
+  """All values that are not contained in given list."""
+  email_not_in: [String!]
+
+  """All values less than the given value."""
+  email_lt: String
+
+  """All values less than or equal the given value."""
+  email_lte: String
+
+  """All values greater than the given value."""
+  email_gt: String
+
+  """All values greater than or equal the given value."""
+  email_gte: String
+
+  """All values containing the given string."""
+  email_contains: String
+
+  """All values not containing the given string."""
+  email_not_contains: String
+
+  """All values starting with the given string."""
+  email_starts_with: String
+
+  """All values not starting with the given string."""
+  email_not_starts_with: String
+
+  """All values ending with the given string."""
+  email_ends_with: String
+
+  """All values not ending with the given string."""
+  email_not_ends_with: String
+  password: String
+
+  """All values that are not equal to given value."""
+  password_not: String
+
+  """All values that are contained in given list."""
+  password_in: [String!]
+
+  """All values that are not contained in given list."""
+  password_not_in: [String!]
+
+  """All values less than the given value."""
+  password_lt: String
+
+  """All values less than or equal the given value."""
+  password_lte: String
+
+  """All values greater than the given value."""
+  password_gt: String
+
+  """All values greater than or equal the given value."""
+  password_gte: String
+
+  """All values containing the given string."""
+  password_contains: String
+
+  """All values not containing the given string."""
+  password_not_contains: String
+
+  """All values starting with the given string."""
+  password_starts_with: String
+
+  """All values not starting with the given string."""
+  password_not_starts_with: String
+
+  """All values ending with the given string."""
+  password_ends_with: String
+
+  """All values not ending with the given string."""
+  password_not_ends_with: String
+  bet: BetWhereInput
+}
+
+input UserWhereUniqueInput {
+  id: ID
+}

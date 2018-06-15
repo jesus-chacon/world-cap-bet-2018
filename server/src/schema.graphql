@@ -1,0 +1,10 @@
+# import Post from "./generated/prisma.graphql"
+
+type Query {
+    players: [Player!]!
+    countries: [Country!]!
+}
+
+type Mutation {
+    signup(email: String!, password: String!): User
+}
