@@ -31,6 +31,9 @@ type CountriesList {
 
 type Bet {
     id: ID! @unique
+    createdAt: DateTime!
+    updatedAt: DateTime!
+    isValid: Boolean @default(value: false)
     topGoalScorer: Player! @relation(name: "TopGoalScorer")
     secondGoalScorer: Player! @relation(name: "SecondGoalScorer")
     round16: CountriesList! @relation(name: "Round16")

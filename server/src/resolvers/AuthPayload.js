@@ -4,4 +4,4 @@ const AuthPayload = {
     },
 }
 
-module.exports = {AuthPayload}
+module.exports = {AuthPayload};
