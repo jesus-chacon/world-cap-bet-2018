@@ -1,0 +1,25 @@
+{
+    "name": "world-cap-bet-2018",
+    "version": "1.0.0",
+    "description": "App for World Cap betting sistem for 2018",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jesus-chacon/world-cap-bet-2018.git"
+    },
+    "keywords": [
+        "Node",
+        "prisma",
+        "react",
+        "apollo"
+    ],
+    "author": "Jesus Cautivo Chacón Ávila",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jesus-chacon/world-cap-bet-2018/issues"
+    },
+    "homepage": "https://github.com/jesus-chacon/world-cap-bet-2018#readme"
+}
