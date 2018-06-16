@@ -1,0 +1,2337 @@
+# Admin (solution creator)
+
+mutation {
+  Russia: createCountry(data: { name: "Russia", flag: "ru" }) {
+    id
+  }
+  Saudi: createCountry(data: { name: "Saudi Arabia", flag: "sa" }) {
+    id
+  }
+  Egypt: createCountry(data: { name: "Egypt", flag: "eg" }) {
+    id
+  }
+  Uruguay: createCountry(data: { name: "Uruguay", flag: "uy" }) {
+    id
+  }
+  Portugal: createCountry(data: { name: "Portugal", flag: "pt" }) {
+    id
+  }
+  Spain: createCountry(data: { name: "Spain", flag: "es" }) {
+    id
+  }
+  Morocco: createCountry(data: { name: "Morocco", flag: "ma" }) {
+    id
+  }
+  Iran: createCountry(data: { name: "Iran", flag: "ir" }) {
+    id
+  }
+  France: createCountry(data: { name: "France", flag: "fr" }) {
+    id
+  }
+  Australia: createCountry(data: { name: "Australia", flag: "au" }) {
+    id
+  }
+  Peru: createCountry(data: { name: "Peru", flag: "pe" }) {
+    id
+  }
+  Denmark: createCountry(data: { name: "Denmark", flag: "dk" }) {
+    id
+  }
+  Argentina: createCountry(data: { name: "Argentina", flag: "ar" }) {
+    id
+  }
+  Iceland: createCountry(data: { name: "Iceland", flag: "is" }) {
+    id
+  }
+  Croatia: createCountry(data: { name: "Croatia", flag: "hr" }) {
+    id
+  }
+  Nigeria: createCountry(data: { name: "Nigeria", flag: "ng" }) {
+    id
+  }
+  Brazil: createCountry(data: { name: "Brazil", flag: "br" }) {
+    id
+  }
+  Switzerland: createCountry(data: { name: "Switzerland", flag: "ch" }) {
+    id
+  }
+  Costa: createCountry(data: { name: "Costa rica", flag: "cr" }) {
+    id
+  }
+  Serbia: createCountry(data: { name: "Serbia", flag: "rs" }) {
+    id
+  }
+  Germany: createCountry(data: { name: "Germany", flag: "de" }) {
+    id
+  }
+  Mexico: createCountry(data: { name: "Mexico", flag: "mx" }) {
+    id
+  }
+  Sweden: createCountry(data: { name: "Sweden", flag: "se" }) {
+    id
+  }
+  South: createCountry(data: { name: "South Korea", flag: "kr" }) {
+    id
+  }
+  Belgium: createCountry(data: { name: "Belgium", flag: "be" }) {
+    id
+  }
+  Panama: createCountry(data: { name: "Panama", flag: "pa" }) {
+    id
+  }
+  Tunisia: createCountry(data: { name: "Tunisia", flag: "tn" }) {
+    id
+  }
+  United: createCountry(data: { name: "United Kingdom", flag: "gb" }) {
+    id
+  }
+  Poland: createCountry(data: { name: "Poland", flag: "pl" }) {
+    id
+  }
+  Senegal: createCountry(data: { name: "Senegal", flag: "sn" }) {
+    id
+  }
+  Colombia: createCountry(data: { name: "Colombia", flag: "co" }) {
+    id
+  }
+  Japan: createCountry(data: { name: "Japan", flag: "jp" }) {
+    id
+  }
+  Igor_Akinfeev: createPlayer(data: { name: "Igor Akinfeev" }) {
+    id
+  }
+  Vladimir_Gabulov: createPlayer(data: { name: "Vladimir Gabulov" }) {
+    id
+  }
+  Andrey_Lunev: createPlayer(data: { name: "Andrey Lunev" }) {
+    id
+  }
+  Sergei_Ignashevich: createPlayer(data: { name: "Sergei Ignashevich" }) {
+    id
+  }
+  Mario_Fernandes: createPlayer(data: { name: "Mario Fernandes" }) {
+    id
+  }
+  Vladimir_Granat: createPlayer(data: { name: "Vladimir Granat" }) {
+    id
+  }
+  Fyodor_Kudryashov: createPlayer(data: { name: "Fyodor Kudryashov" }) {
+    id
+  }
+  Andrei_Semyonov: createPlayer(data: { name: "Andrei Semyonov" }) {
+    id
+  }
+  Igor_Smolnikov: createPlayer(data: { name: "Igor Smolnikov" }) {
+    id
+  }
+  Ilya_Kutepov: createPlayer(data: { name: "Ilya Kutepov" }) {
+    id
+  }
+  Aleksandr_Yerokhin: createPlayer(data: { name: "Aleksandr Yerokhin" }) {
+    id
+  }
+  Yuri_Zhirkov: createPlayer(data: { name: "Yuri Zhirkov" }) {
+    id
+  }
+  Daler_Kuzyaev: createPlayer(data: { name: "Daler Kuzyaev" }) {
+    id
+  }
+  Aleksandr_Golovin: createPlayer(data: { name: "Aleksandr Golovin" }) {
+    id
+  }
+  Alan_Dzagoev: createPlayer(data: { name: "Alan Dzagoev" }) {
+    id
+  }
+  Roman_Zobnin: createPlayer(data: { name: "Roman Zobnin" }) {
+    id
+  }
+  Aleksandr_Samedov: createPlayer(data: { name: "Aleksandr Samedov" }) {
+    id
+  }
+  Yuri_Gazinsky: createPlayer(data: { name: "Yuri Gazinsky" }) {
+    id
+  }
+  Anton_Miranchuk: createPlayer(data: { name: "Anton Miranchuk" }) {
+    id
+  }
+  Denis_Cheryshev: createPlayer(data: { name: "Denis Cheryshev" }) {
+    id
+  }
+  Artyom_Dzyuba: createPlayer(data: { name: "Artyom Dzyuba" }) {
+    id
+  }
+  Aleksei_Miranchuk: createPlayer(data: { name: "Aleksei Miranchuk" }) {
+    id
+  }
+  Fyodor_Smolov: createPlayer(data: { name: "Fyodor Smolov" }) {
+    id
+  }
+  Mohammed_Al_Owais: createPlayer(data: { name: "Mohammed Al-Owais" }) {
+    id
+  }
+  Yasser_Al_Musailem: createPlayer(data: { name: "Yasser Al-Musailem" }) {
+    id
+  }
+  Abdullah_Al_Mayuf: createPlayer(data: { name: "Abdullah Al-Mayuf" }) {
+    id
+  }
+  Mansoor_Al_Harbi: createPlayer(data: { name: " Mansoor Al-Harbi" }) {
+    id
+  }
+  Yasser_Al_Shahrani: createPlayer(data: { name: "Yasser Al-Shahrani" }) {
+    id
+  }
+  Mohammed_Al_Burayk: createPlayer(data: { name: "Mohammed Al-Burayk" }) {
+    id
+  }
+  Motaz_Hawsawi: createPlayer(data: { name: "Motaz Hawsawi" }) {
+    id
+  }
+  Osama_Hawsawi: createPlayer(data: { name: "Osama Hawsawi" }) {
+    id
+  }
+  Ali_Al_Bulaihi: createPlayer(data: { name: "Ali Al-Bulaihi" }) {
+    id
+  }
+  Omar_Othman: createPlayer(data: { name: "Omar Othman" }) {
+    id
+  }
+  Abdullah_Alkhaibari: createPlayer(data: { name: " Abdullah Alkhaibari" }) {
+    id
+  }
+  Abdulmalek_Alkhaibri: createPlayer(data: { name: "Abdulmalek Alkhaibri" }) {
+    id
+  }
+  Abdullah_Otayf: createPlayer(data: { name: "Abdullah Otayf" }) {
+    id
+  }
+  Taiseer_Al_Jassam: createPlayer(data: { name: "Taiseer Al-Jassam" }) {
+    id
+  }
+  Hussain_Al_Moqahwi: createPlayer(data: { name: "Hussain Al-Moqahwi" }) {
+    id
+  }
+  Salman_Al_Faraj: createPlayer(data: { name: "Salman Al-Faraj" }) {
+    id
+  }
+  Mohamed_Kanno: createPlayer(data: { name: "Mohamed Kanno" }) {
+    id
+  }
+  Hatan_Bahbir: createPlayer(data: { name: "Hatan Bahbir" }) {
+    id
+  }
+  Salem_Al_Dawsari: createPlayer(data: { name: "Salem Al-Dawsari" }) {
+    id
+  }
+  Yahia_Al_Shehri: createPlayer(data: { name: "Yahia Al-Shehri" }) {
+    id
+  }
+  Fahad_Al_Muwallad: createPlayer(data: { name: " Fahad Al-Muwallad" }) {
+    id
+  }
+  Mohammad_Al_Sahlawi: createPlayer(data: { name: "Mohammad Al-Sahlawi" }) {
+    id
+  }
+  Muhannad_Assiri: createPlayer(data: { name: "Muhannad Assiri" }) {
+    id
+  }
+  Essam_El_Hadary: createPlayer(data: { name: "Essam El Hadary" }) {
+    id
+  }
+  Mohamed_El_Shennawy: createPlayer(data: { name: "Mohamed El-Shennawy" }) {
+    id
+  }
+  Sherif_Ekramy: createPlayer(data: { name: "Sherif Ekramy" }) {
+    id
+  }
+  Ahmed_Fathi: createPlayer(data: { name: " Ahmed Fathi" }) {
+    id
+  }
+  Abdallah_Said: createPlayer(data: { name: "Abdallah Said" }) {
+    id
+  }
+  Saad_Samir: createPlayer(data: { name: "Saad Samir" }) {
+    id
+  }
+  Ayman_Ashraf: createPlayer(data: { name: "Ayman Ashraf" }) {
+    id
+  }
+  Mohamed_Abdel_Shafy: createPlayer(data: { name: "Mohamed Abdel-Shafy" }) {
+    id
+  }
+  Ahmed_Hegazi: createPlayer(data: { name: "Ahmed Hegazi" }) {
+    id
+  }
+  Ali_Gabr: createPlayer(data: { name: "Ali Gabr" }) {
+    id
+  }
+  Ahmed_Elmohamady: createPlayer(data: { name: "Ahmed Elmohamady" }) {
+    id
+  }
+  Omar_Gaber: createPlayer(data: { name: "Omar Gaber" }) {
+    id
+  }
+  Tarek_Hamed: createPlayer(data: { name: " Tarek Hamed" }) {
+    id
+  }
+  Mahmoud_Shikabala: createPlayer(data: { name: "Mahmoud Shikabala" }) {
+    id
+  }
+  Sam_Morsy: createPlayer(data: { name: "Sam Morsy" }) {
+    id
+  }
+  Mohamed_Elneny: createPlayer(data: { name: "Mohamed Elneny" }) {
+    id
+  }
+  Mahmoud_Kahraba: createPlayer(data: { name: "Mahmoud Kahraba" }) {
+    id
+  }
+  Ramadan_Sobhi: createPlayer(data: { name: "Ramadan Sobhi" }) {
+    id
+  }
+  Trezeguet: createPlayer(data: { name: "Trezeguet" }) {
+    id
+  }
+  Amr_Warda: createPlayer(data: { name: "Amr Warda" }) {
+    id
+  }
+  Marwan_Mohsen: createPlayer(data: { name: " Marwan Mohsen" }) {
+    id
+  }
+  Mohamed_Salah: createPlayer(data: { name: "Mohamed Salah" }) {
+    id
+  }
+  Mahmoud_Elwensh: createPlayer(data: { name: "Mahmoud Elwensh" }) {
+    id
+  }
+  Fernando_Muslera: createPlayer(data: { name: "Fernando Muslera" }) {
+    id
+  }
+  Martin_Silva: createPlayer(data: { name: "Martin Silva" }) {
+    id
+  }
+  Martin_Campana: createPlayer(data: { name: "Martin Campana" }) {
+    id
+  }
+  Diego_Godin: createPlayer(data: { name: "Diego Godin" }) {
+    id
+  }
+  Sebastian_Coates: createPlayer(data: { name: "Sebastian Coates" }) {
+    id
+  }
+  Jose_Maria_Gimenez: createPlayer(data: { name: "Jose Maria Gimenez" }) {
+    id
+  }
+  Maximiliano_Pereira: createPlayer(data: { name: "Maximiliano Pereira" }) {
+    id
+  }
+  Gaston_Silva: createPlayer(data: { name: "Gaston Silva" }) {
+    id
+  }
+  Martin_Caceres: createPlayer(data: { name: "Martin Caceres" }) {
+    id
+  }
+  Guillermo_Varela: createPlayer(data: { name: "Guillermo Varela" }) {
+    id
+  }
+  Nahitan_Nandez: createPlayer(data: { name: "Nahitan Nandez" }) {
+    id
+  }
+  Lucas_Torreira: createPlayer(data: { name: "Lucas Torreira" }) {
+    id
+  }
+  Matias_Vecino: createPlayer(data: { name: "Matias Vecino" }) {
+    id
+  }
+  Rodrigo_Bentancur: createPlayer(data: { name: "Rodrigo Bentancur" }) {
+    id
+  }
+  Carlos_Sanchez: createPlayer(data: { name: "Carlos Sanchez" }) {
+    id
+  }
+  Giorgian_De_Arrascaeta: createPlayer(
+    data: { name: "Giorgian De Arrascaeta" }
+  ) {
+    id
+  }
+  Diego_Laxalt: createPlayer(data: { name: "Diego Laxalt" }) {
+    id
+  }
+  Cristian_Rodriguez: createPlayer(data: { name: "Cristian Rodriguez" }) {
+    id
+  }
+  Jonathan_Urretaviscaya: createPlayer(
+    data: { name: "Jonathan Urretaviscaya" }
+  ) {
+    id
+  }
+  Cristhian_Stuani: createPlayer(data: { name: "Cristhian Stuani" }) {
+    id
+  }
+  Maximiliano_Gomez: createPlayer(data: { name: "Maximiliano Gomez" }) {
+    id
+  }
+  Edinson_Cavani: createPlayer(data: { name: "Edinson Cavani" }) {
+    id
+  }
+  Luis_Suarez: createPlayer(data: { name: "Luis Suarez" }) {
+    id
+  }
+  Anthony_Lopes: createPlayer(data: { name: "Anthony Lopes" }) {
+    id
+  }
+  Beto: createPlayer(data: { name: "Beto" }) {
+    id
+  }
+  Rui_Patricio: createPlayer(data: { name: "Rui Patricio" }) {
+    id
+  }
+  Bruno_Alves: createPlayer(data: { name: "Bruno Alves" }) {
+    id
+  }
+  Cedric_Soares: createPlayer(data: { name: "Cedric Soares" }) {
+    id
+  }
+  Jose_Fonte: createPlayer(data: { name: "Jose Fonte" }) {
+    id
+  }
+  Mario_Rui: createPlayer(data: { name: "Mario Rui" }) {
+    id
+  }
+  Pepe: createPlayer(data: { name: "Pepe" }) {
+    id
+  }
+  Raphael_Guerreiro: createPlayer(data: { name: "Raphael Guerreiro" }) {
+    id
+  }
+  Ricardo_Pereira: createPlayer(data: { name: "Ricardo Pereira" }) {
+    id
+  }
+  Ruben_Dias: createPlayer(data: { name: "Ruben Dias" }) {
+    id
+  }
+  Adrien_Silva: createPlayer(data: { name: "Adrien Silva" }) {
+    id
+  }
+  Bruno_Fernandes: createPlayer(data: { name: "Bruno Fernandes" }) {
+    id
+  }
+  Joao_Mario: createPlayer(data: { name: "Joao Mario" }) {
+    id
+  }
+  Joao_Moutinho: createPlayer(data: { name: "Joao Moutinho" }) {
+    id
+  }
+  Manuel_Fernandes: createPlayer(data: { name: "Manuel Fernandes" }) {
+    id
+  }
+  William_Carvalho: createPlayer(data: { name: "William Carvalho" }) {
+    id
+  }
+  Andre_Silva: createPlayer(data: { name: "Andre Silva" }) {
+    id
+  }
+  Bernardo_Silva: createPlayer(data: { name: "Bernardo Silva" }) {
+    id
+  }
+  Cristiano_Ronaldo: createPlayer(data: { name: "Cristiano Ronaldo" }) {
+    id
+  }
+  Gelson_Martins: createPlayer(data: { name: "Gelson Martins" }) {
+    id
+  }
+  Goncalo_Guedes: createPlayer(data: { name: "Goncalo Guedes" }) {
+    id
+  }
+  Ricardo_Quaresma: createPlayer(data: { name: "Ricardo Quaresma " }) {
+    id
+  }
+  David_de_Gea: createPlayer(data: { name: "David de Gea" }) {
+    id
+  }
+  Pepe_Reina: createPlayer(data: { name: "Pepe Reina" }) {
+    id
+  }
+  Kepa_Arrizabalaga: createPlayer(data: { name: "Kepa Arrizabalaga" }) {
+    id
+  }
+  Dani_Carvajal: createPlayer(data: { name: " Dani Carvajal" }) {
+    id
+  }
+  Alvaro_Odriozola: createPlayer(data: { name: "Alvaro Odriozola" }) {
+    id
+  }
+  Gerard_Pique: createPlayer(data: { name: "Gerard Pique" }) {
+    id
+  }
+  Sergio_Ramos: createPlayer(data: { name: "Sergio Ramos" }) {
+    id
+  }
+  Nacho: createPlayer(data: { name: "Nacho" }) {
+    id
+  }
+  Cesar_Azpilicueta: createPlayer(data: { name: "Cesar Azpilicueta" }) {
+    id
+  }
+  Jordi_Alba: createPlayer(data: { name: "Jordi Alba" }) {
+    id
+  }
+  Nacho_Monreal: createPlayer(data: { name: "Nacho Monreal" }) {
+    id
+  }
+  Sergio_Busquets: createPlayer(data: { name: " Sergio Busquets" }) {
+    id
+  }
+  Saul_Niquez: createPlayer(data: { name: "Saul Niquez" }) {
+    id
+  }
+  Koke: createPlayer(data: { name: "Koke" }) {
+    id
+  }
+  Thiago_Alcantara: createPlayer(data: { name: "Thiago Alcantara" }) {
+    id
+  }
+  Andres_Iniesta: createPlayer(data: { name: "Andres Iniesta" }) {
+    id
+  }
+  David_Silva: createPlayer(data: { name: "David Silva" }) {
+    id
+  }
+  _Isco: createPlayer(data: { name: " Isco" }) {
+    id
+  }
+  Marcio_Asensio: createPlayer(data: { name: "Marcio Asensio" }) {
+    id
+  }
+  Lucas_Vazquez: createPlayer(data: { name: "Lucas Vazquez" }) {
+    id
+  }
+  Iago_Aspas: createPlayer(data: { name: "Iago Aspas" }) {
+    id
+  }
+  Rodrigo: createPlayer(data: { name: "Rodrigo" }) {
+    id
+  }
+  Diego_Costa: createPlayer(data: { name: "Diego Costa." }) {
+    id
+  }
+  Mounir_El_Kajoui: createPlayer(data: { name: "Mounir El Kajoui" }) {
+    id
+  }
+  Yassine_Bounou: createPlayer(data: { name: "Yassine Bounou" }) {
+    id
+  }
+  Ahmad_Reda_Tagnaouti: createPlayer(data: { name: "Ahmad Reda Tagnaouti" }) {
+    id
+  }
+  Mehdi_Benatia: createPlayer(data: { name: "Mehdi Benatia" }) {
+    id
+  }
+  Romain_Saiss: createPlayer(data: { name: "Romain Saiss" }) {
+    id
+  }
+  Manuel_Da_Costa: createPlayer(data: { name: "Manuel Da Costa" }) {
+    id
+  }
+  Badr_Benoun: createPlayer(data: { name: "Badr Benoun" }) {
+    id
+  }
+  Nabil_Dirar: createPlayer(data: { name: "Nabil Dirar" }) {
+    id
+  }
+  Achraf_Hakimi: createPlayer(data: { name: "Achraf Hakimi" }) {
+    id
+  }
+  Hamza_Mendyl: createPlayer(data: { name: "Hamza Mendyl" }) {
+    id
+  }
+  Mbark_Boussoufa: createPlayer(data: { name: " M'bark Boussoufa" }) {
+    id
+  }
+  Karim_El_Ahmadi: createPlayer(data: { name: "Karim El Ahmadi" }) {
+    id
+  }
+  Youssef_Ait_Bennasser: createPlayer(data: { name: "Youssef Ait Bennasser" }) {
+    id
+  }
+  Sofyan_Amrabat: createPlayer(data: { name: "Sofyan Amrabat" }) {
+    id
+  }
+  Younes_Belhanda: createPlayer(data: { name: "Younes Belhanda" }) {
+    id
+  }
+  Faycal_Fajr: createPlayer(data: { name: "Faycal Fajr" }) {
+    id
+  }
+  Amine_Harit: createPlayer(data: { name: "Amine Harit" }) {
+    id
+  }
+  Khalid_Boutaib: createPlayer(data: { name: " Khalid Boutaib" }) {
+    id
+  }
+  Aziz_Bouhaddouz: createPlayer(data: { name: "Aziz Bouhaddouz" }) {
+    id
+  }
+  Ayoub_El_Kaabi: createPlayer(data: { name: "Ayoub El Kaabi" }) {
+    id
+  }
+  Nordin_Amrabat: createPlayer(data: { name: "Nordin Amrabat" }) {
+    id
+  }
+  Mehdi_Carcela: createPlayer(data: { name: "Mehdi Carcela" }) {
+    id
+  }
+  Hakim_Ziyech: createPlayer(data: { name: "Hakim Ziyech" }) {
+    id
+  }
+  Alireza_Beiranvand: createPlayer(data: { name: "Alireza Beiranvand" }) {
+    id
+  }
+  Rashid_Mazaheri: createPlayer(data: { name: "Rashid Mazaheri" }) {
+    id
+  }
+  Amir_Abedzadeh: createPlayer(data: { name: "Amir Abedzadeh" }) {
+    id
+  }
+  Ramin_Rezaeian: createPlayer(data: { name: " Ramin Rezaeian" }) {
+    id
+  }
+  Mohammad_Reza_Khanzadeh: createPlayer(
+    data: { name: "Mohammad Reza Khanzadeh" }
+  ) {
+    id
+  }
+  Morteza_Pouraliganji: createPlayer(data: { name: "Morteza Pouraliganji" }) {
+    id
+  }
+  Pejman_Montazeri: createPlayer(data: { name: "Pejman Montazeri" }) {
+    id
+  }
+  Seyed_Majid_Hosseini: createPlayer(data: { name: "Seyed Majid Hosseini" }) {
+    id
+  }
+  Milad_Mohammadi: createPlayer(data: { name: "Milad Mohammadi" }) {
+    id
+  }
+  Roozbeh_Cheshmi: createPlayer(data: { name: "Roozbeh Cheshmi" }) {
+    id
+  }
+  Saeid_Ezatolahi: createPlayer(data: { name: " Saeid Ezatolahi" }) {
+    id
+  }
+  Masoud_Shojaei: createPlayer(data: { name: "Masoud Shojaei" }) {
+    id
+  }
+  Saman_Ghoddos: createPlayer(data: { name: "Saman Ghoddos" }) {
+    id
+  }
+  Mehdi_Torabi: createPlayer(data: { name: "Mehdi Torabi" }) {
+    id
+  }
+  Ashkan_Dejagah: createPlayer(data: { name: "Ashkan Dejagah" }) {
+    id
+  }
+  Omid_Ebrahimi: createPlayer(data: { name: "Omid Ebrahimi" }) {
+    id
+  }
+  Ehsan_Hajsafi: createPlayer(data: { name: "Ehsan Hajsafi" }) {
+    id
+  }
+  Vahid_Amiri: createPlayer(data: { name: "Vahid Amiri" }) {
+    id
+  }
+  Alireza_Jahanbakhsh: createPlayer(data: { name: " Alireza Jahanbakhsh" }) {
+    id
+  }
+  Karim_Ansarifard: createPlayer(data: { name: "Karim Ansarifard" }) {
+    id
+  }
+  Mahdi_Taremi: createPlayer(data: { name: "Mahdi Taremi" }) {
+    id
+  }
+  Sardar_Azmoun: createPlayer(data: { name: "Sardar Azmoun" }) {
+    id
+  }
+  Reza_Ghoochannejhad: createPlayer(data: { name: "Reza Ghoochannejhad" }) {
+    id
+  }
+  Alphonse_Areola: createPlayer(data: { name: "Alphonse Areola" }) {
+    id
+  }
+  Hugo_Lloris: createPlayer(data: { name: "Hugo Lloris" }) {
+    id
+  }
+  Steve_Mandanda: createPlayer(data: { name: "Steve Mandanda" }) {
+    id
+  }
+  Lucas_Hernandez: createPlayer(data: { name: " Lucas Hernandez" }) {
+    id
+  }
+  Presnel_Kimpembe: createPlayer(data: { name: "Presnel Kimpembe" }) {
+    id
+  }
+  Benjamin_Mendy: createPlayer(data: { name: "Benjamin Mendy" }) {
+    id
+  }
+  Benjamin_Pavard: createPlayer(data: { name: "Benjamin Pavard" }) {
+    id
+  }
+  Adil_Rami: createPlayer(data: { name: "Adil Rami" }) {
+    id
+  }
+  Djibril_Sidibe: createPlayer(data: { name: "Djibril Sidibe" }) {
+    id
+  }
+  Samuel_Umtiti: createPlayer(data: { name: "Samuel Umtiti" }) {
+    id
+  }
+  Raphael_Varane: createPlayer(data: { name: "Raphael Varane" }) {
+    id
+  }
+  NGolo_Kante: createPlayer(data: { name: " N'Golo Kante" }) {
+    id
+  }
+  Blaise_Matuidi: createPlayer(data: { name: "Blaise Matuidi" }) {
+    id
+  }
+  Steven_NZonzi: createPlayer(data: { name: "Steven N'Zonzi" }) {
+    id
+  }
+  Paul_Pogba: createPlayer(data: { name: "Paul Pogba" }) {
+    id
+  }
+  Corentin_Tolisso: createPlayer(data: { name: "Corentin Tolisso" }) {
+    id
+  }
+  Ousmane_Dembele: createPlayer(data: { name: "Ousmane Dembele" }) {
+    id
+  }
+  Nabil_Fekir: createPlayer(data: { name: "Nabil Fekir" }) {
+    id
+  }
+  Olivier_Giroud: createPlayer(data: { name: " Olivier Giroud" }) {
+    id
+  }
+  Antoine_Griezmann: createPlayer(data: { name: "Antoine Griezmann" }) {
+    id
+  }
+  Thomas_Lemar: createPlayer(data: { name: "Thomas Lemar" }) {
+    id
+  }
+  Kylian_Mbappe: createPlayer(data: { name: "Kylian Mbappe" }) {
+    id
+  }
+  Florian_Thauvin: createPlayer(data: { name: "Florian Thauvin" }) {
+    id
+  }
+  Brad_Jones: createPlayer(data: { name: "Brad Jones" }) {
+    id
+  }
+  Mat_Ryan: createPlayer(data: { name: "Mat Ryan" }) {
+    id
+  }
+  Danny_Vukovic: createPlayer(data: { name: "Danny Vukovic" }) {
+    id
+  }
+  Aziz_Behich: createPlayer(data: { name: " Aziz Behich" }) {
+    id
+  }
+  Milos_Degenek: createPlayer(data: { name: "Milos Degenek" }) {
+    id
+  }
+  Matthew_Jurman: createPlayer(data: { name: "Matthew Jurman" }) {
+    id
+  }
+  James_Meredith: createPlayer(data: { name: "James Meredith" }) {
+    id
+  }
+  Josh_Risdon: createPlayer(data: { name: "Josh Risdon" }) {
+    id
+  }
+  Trent_Sainsbury: createPlayer(data: { name: "Trent Sainsbury" }) {
+    id
+  }
+  Jackson_Irvine: createPlayer(data: { name: " Jackson Irvine" }) {
+    id
+  }
+  Mile_Jedinak: createPlayer(data: { name: "Mile Jedinak" }) {
+    id
+  }
+  Robbie_Kruse: createPlayer(data: { name: "Robbie Kruse" }) {
+    id
+  }
+  Massimo_Luongo: createPlayer(data: { name: "Massimo Luongo" }) {
+    id
+  }
+  Mark_Milligan: createPlayer(data: { name: "Mark Milligan" }) {
+    id
+  }
+  Aaron_Mooy: createPlayer(data: { name: "Aaron Mooy" }) {
+    id
+  }
+  Tom_Rogic: createPlayer(data: { name: "Tom Rogic" }) {
+    id
+  }
+  Daniel_Arzani: createPlayer(data: { name: " Daniel Arzani" }) {
+    id
+  }
+  Tim_Cahill: createPlayer(data: { name: "Tim Cahill" }) {
+    id
+  }
+  Tomi_Juric: createPlayer(data: { name: "Tomi Juric" }) {
+    id
+  }
+  Mathew_Leckie: createPlayer(data: { name: "Mathew Leckie" }) {
+    id
+  }
+  Andrew_Nabbout: createPlayer(data: { name: "Andrew Nabbout" }) {
+    id
+  }
+  Dimitri_Petratos: createPlayer(data: { name: "Dimitri Petratos" }) {
+    id
+  }
+  Jamie_Maclaren: createPlayer(data: { name: "Jamie Maclaren" }) {
+    id
+  }
+  Carlos_Caceda: createPlayer(data: { name: "Carlos Caceda" }) {
+    id
+  }
+  Jose_Carvallo: createPlayer(data: { name: "Jose Carvallo" }) {
+    id
+  }
+  Pedro_Gallese: createPlayer(data: { name: "Pedro Gallese" }) {
+    id
+  }
+  Luis_Advincula: createPlayer(data: { name: "Luis Advincula" }) {
+    id
+  }
+  Pedro_Aquino: createPlayer(data: { name: "Pedro Aquino" }) {
+    id
+  }
+  Miguel_Araujo: createPlayer(data: { name: "Miguel Araujo" }) {
+    id
+  }
+  Andre_Carrillo: createPlayer(data: { name: "Andre Carrillo" }) {
+    id
+  }
+  Wilder_Cartagena: createPlayer(data: { name: "Wilder Cartagena" }) {
+    id
+  }
+  Aldo_Corzo: createPlayer(data: { name: "Aldo Corzo" }) {
+    id
+  }
+  Christian_Cueva: createPlayer(data: { name: "Christian Cueva" }) {
+    id
+  }
+  Jefferson_Farfan: createPlayer(data: { name: "Jefferson Farfan" }) {
+    id
+  }
+  Edison_Flores: createPlayer(data: { name: "Edison Flores" }) {
+    id
+  }
+  Paolo_Hurtado: createPlayer(data: { name: "Paolo Hurtado" }) {
+    id
+  }
+  Nilson_Loyola: createPlayer(data: { name: "Nilson Loyola" }) {
+    id
+  }
+  Andy_Polo: createPlayer(data: { name: "Andy Polo" }) {
+    id
+  }
+  Christian_Ramos: createPlayer(data: { name: "Christian Ramos" }) {
+    id
+  }
+  Alberto_Rodriguez: createPlayer(data: { name: "Alberto Rodriguez" }) {
+    id
+  }
+  Raul_Ruidiaz: createPlayer(data: { name: "Raul Ruidiaz" }) {
+    id
+  }
+  Anderson_Santamaria: createPlayer(data: { name: "Anderson Santamaria" }) {
+    id
+  }
+  Renato_Tapia: createPlayer(data: { name: "Renato Tapia" }) {
+    id
+  }
+  Miguel_Trauco: createPlayer(data: { name: "Miguel Trauco" }) {
+    id
+  }
+  Yoshimar_Yotun: createPlayer(data: { name: "Yoshimar Yotun" }) {
+    id
+  }
+  Paolo_Guerrero: createPlayer(data: { name: "Paolo Guerrero" }) {
+    id
+  }
+  Kasper_Schmeichel: createPlayer(data: { name: "Kasper Schmeichel" }) {
+    id
+  }
+  Jonas_Lossl: createPlayer(data: { name: "Jonas Lossl" }) {
+    id
+  }
+  Frederik_Ronow: createPlayer(data: { name: "Frederik Ronow" }) {
+    id
+  }
+  Simon_Kjaer: createPlayer(data: { name: " Simon Kjaer" }) {
+    id
+  }
+  Andreas_Christensen: createPlayer(data: { name: "Andreas Christensen" }) {
+    id
+  }
+  Mathias_Jorgensen: createPlayer(data: { name: "Mathias Jorgensen" }) {
+    id
+  }
+  Jannik_Vestergaard: createPlayer(data: { name: "Jannik Vestergaard" }) {
+    id
+  }
+  Henrik_Dalsgaard: createPlayer(data: { name: "Henrik Dalsgaard" }) {
+    id
+  }
+  Jens_Stryger: createPlayer(data: { name: "Jens Stryger" }) {
+    id
+  }
+  Jonas_Knudsen: createPlayer(data: { name: "Jonas Knudsen" }) {
+    id
+  }
+  William_Kvist: createPlayer(data: { name: " William Kvist" }) {
+    id
+  }
+  Thomas_Delaney: createPlayer(data: { name: "Thomas Delaney" }) {
+    id
+  }
+  Lukas_Lerager: createPlayer(data: { name: "Lukas Lerager" }) {
+    id
+  }
+  Lasse_Schone: createPlayer(data: { name: "Lasse Schone" }) {
+    id
+  }
+  Christian_Eriksen: createPlayer(data: { name: "Christian Eriksen" }) {
+    id
+  }
+  Michael_Krohn_Dehli: createPlayer(data: { name: "Michael Krohn-Dehli" }) {
+    id
+  }
+  Pione_Sisto: createPlayer(data: { name: " Pione Sisto" }) {
+    id
+  }
+  Martin_Braithwaite: createPlayer(data: { name: "Martin Braithwaite" }) {
+    id
+  }
+  Andreas_Cornelius: createPlayer(data: { name: "Andreas Cornelius" }) {
+    id
+  }
+  Viktor_Fischer: createPlayer(data: { name: "Viktor Fischer" }) {
+    id
+  }
+  Yussuf_Poulsen: createPlayer(data: { name: "Yussuf Poulsen" }) {
+    id
+  }
+  Nicolai_Jorgensen: createPlayer(data: { name: "Nicolai Jorgensen" }) {
+    id
+  }
+  Kasper_Dolberg: createPlayer(data: { name: "Kasper Dolberg" }) {
+    id
+  }
+  Nahuel_Guzman: createPlayer(data: { name: "Nahuel Guzmán" }) {
+    id
+  }
+  Willy_Caballero: createPlayer(data: { name: "Willy Caballero" }) {
+    id
+  }
+  Franco_Armani: createPlayer(data: { name: "Franco Armani" }) {
+    id
+  }
+  Gabriel_Mercado: createPlayer(data: { name: " Gabriel Mercado" }) {
+    id
+  }
+  Nicolas_Otamendi: createPlayer(data: { name: "Nicolas Otamendi" }) {
+    id
+  }
+  Federico_Fazio: createPlayer(data: { name: "Federico Fazio" }) {
+    id
+  }
+  Nicolas_Tagliafico: createPlayer(data: { name: "Nicolas Tagliafico" }) {
+    id
+  }
+  Marcos_Rojo: createPlayer(data: { name: "Marcos Rojo" }) {
+    id
+  }
+  Marcos_Acuna: createPlayer(data: { name: "Marcos Acuna" }) {
+    id
+  }
+  Cristian_Ansaldi: createPlayer(data: { name: "Cristian Ansaldi" }) {
+    id
+  }
+  Eduardo_Salvio: createPlayer(data: { name: "Eduardo Salvio" }) {
+    id
+  }
+  Javier_Mascherano: createPlayer(data: { name: " Javier Mascherano" }) {
+    id
+  }
+  Angel_Di_Maria: createPlayer(data: { name: "Angel Di Maria" }) {
+    id
+  }
+  Ever_Banega: createPlayer(data: { name: "Ever Banega" }) {
+    id
+  }
+  Lucas_Biglia: createPlayer(data: { name: "Lucas Biglia" }) {
+    id
+  }
+  Manuel_Lanzini: createPlayer(data: { name: "Manuel Lanzini" }) {
+    id
+  }
+  Gio_Lo_Celso: createPlayer(data: { name: "Gio Lo Celso" }) {
+    id
+  }
+  Maximiliano_Meza: createPlayer(data: { name: "Maximiliano Meza" }) {
+    id
+  }
+  Lionel_Messi: createPlayer(data: { name: " Lionel Messi" }) {
+    id
+  }
+  Sergio_Aguero: createPlayer(data: { name: "Sergio Aguero" }) {
+    id
+  }
+  Gonzalo_Higuain: createPlayer(data: { name: "Gonzalo Higuain" }) {
+    id
+  }
+  Paulo_Dybala: createPlayer(data: { name: "Paulo Dybala" }) {
+    id
+  }
+  Cristian_Pavon: createPlayer(data: { name: "Cristian Pavon" }) {
+    id
+  }
+  Hannes_Thor_Halldorsson: createPlayer(
+    data: { name: "Hannes Thor Halldorsson" }
+  ) {
+    id
+  }
+  Runar_Alex_Runarsson: createPlayer(data: { name: "Runar Alex Runarsson" }) {
+    id
+  }
+  Frederik_Schram: createPlayer(data: { name: "Frederik Schram" }) {
+    id
+  }
+  Kari_Arnason: createPlayer(data: { name: " Kari Arnason" }) {
+    id
+  }
+  Ari_Freyr_Skulason: createPlayer(data: { name: "Ari Freyr Skulason" }) {
+    id
+  }
+  Birkir_Mar_Saevarsson: createPlayer(data: { name: "Birkir Mar Saevarsson" }) {
+    id
+  }
+  Sverrir_Ingi_Ingason: createPlayer(data: { name: "Sverrir Ingi Ingason" }) {
+    id
+  }
+  Hordur_Magnusson: createPlayer(data: { name: "Hordur Magnusson" }) {
+    id
+  }
+  Holmar_Orn_Eyjolfsson: createPlayer(data: { name: "Holmar Orn Eyjolfsson" }) {
+    id
+  }
+  Ragnar_Sigurdsson: createPlayer(data: { name: "Ragnar Sigurdsson" }) {
+    id
+  }
+  Johann_Berg_Gudmundsson: createPlayer(
+    data: { name: " Johann Berg Gudmundsson" }
+  ) {
+    id
+  }
+  Birkir_Bjarnason: createPlayer(data: { name: "Birkir Bjarnason" }) {
+    id
+  }
+  Arnor_Ingvi_Traustason: createPlayer(
+    data: { name: "Arnor Ingvi Traustason" }
+  ) {
+    id
+  }
+  Emil_Hallfredsson: createPlayer(data: { name: "Emil Hallfredsson" }) {
+    id
+  }
+  Gylfi_Sigurdsson: createPlayer(data: { name: "Gylfi Sigurdsson" }) {
+    id
+  }
+  Olafur_Ingi_Skulason: createPlayer(data: { name: "Olafur Ingi Skulason" }) {
+    id
+  }
+  Rurik_Gislason: createPlayer(data: { name: "Rurik Gislason" }) {
+    id
+  }
+  Samuel_Fridjonsson: createPlayer(data: { name: "Samuel Fridjonsson" }) {
+    id
+  }
+  Aron_Gunnarsson: createPlayer(data: { name: "Aron Gunnarsson" }) {
+    id
+  }
+  Alfred_Finnbogason: createPlayer(data: { name: " Alfred Finnbogason" }) {
+    id
+  }
+  Bjorn_Bergmann_Sigurdarson: createPlayer(
+    data: { name: "Bjorn Bergmann Sigurdarson" }
+  ) {
+    id
+  }
+  Jon_Dadi_Bodvarsson: createPlayer(data: { name: "Jon Dadi Bodvarsson" }) {
+    id
+  }
+  Albert_Gudmundsson: createPlayer(data: { name: "Albert Gudmundsson" }) {
+    id
+  }
+  Danijel_Subasic: createPlayer(data: { name: "Danijel Subasic" }) {
+    id
+  }
+  Lovre_Kalinic: createPlayer(data: { name: "Lovre Kalinic" }) {
+    id
+  }
+  Dominik_Livakovic: createPlayer(data: { name: "Dominik Livakovic" }) {
+    id
+  }
+  Vedran_Corluka: createPlayer(data: { name: " Vedran Corluka" }) {
+    id
+  }
+  Domagoj_Vida: createPlayer(data: { name: "Domagoj Vida" }) {
+    id
+  }
+  Ivan_Strinic: createPlayer(data: { name: "Ivan Strinic" }) {
+    id
+  }
+  Dejan_Lovren: createPlayer(data: { name: "Dejan Lovren" }) {
+    id
+  }
+  Sime_Vrsaljko: createPlayer(data: { name: "Sime Vrsaljko" }) {
+    id
+  }
+  Josip_Pivaric: createPlayer(data: { name: "Josip Pivaric" }) {
+    id
+  }
+  Tin_Jedvaj: createPlayer(data: { name: "Tin Jedvaj" }) {
+    id
+  }
+  Duje_Caleta_Car: createPlayer(data: { name: "Duje Caleta-Car" }) {
+    id
+  }
+  Luka_Modric: createPlayer(data: { name: " Luka Modric" }) {
+    id
+  }
+  Ivan_Rakitic: createPlayer(data: { name: "Ivan Rakitic" }) {
+    id
+  }
+  Mateo_Kovacic: createPlayer(data: { name: "Mateo Kovacic" }) {
+    id
+  }
+  Milan_Badelj: createPlayer(data: { name: "Milan Badelj" }) {
+    id
+  }
+  Marcelo_Brozovic: createPlayer(data: { name: "Marcelo Brozovic" }) {
+    id
+  }
+  Filip_Bradaric: createPlayer(data: { name: "Filip Bradaric" }) {
+    id
+  }
+  Mario_Mandzukic: createPlayer(data: { name: "Mario Mandzukic" }) {
+    id
+  }
+  Ivan_Perisic: createPlayer(data: { name: "Ivan Perisic" }) {
+    id
+  }
+  Nikola_Kalinic: createPlayer(data: { name: "Nikola Kalinic" }) {
+    id
+  }
+  Andrej_Kramaric: createPlayer(data: { name: "Andrej Kramaric" }) {
+    id
+  }
+  Marko_Pjaca: createPlayer(data: { name: "Marko Pjaca" }) {
+    id
+  }
+  Ante_Rebic: createPlayer(data: { name: "Ante Rebic" }) {
+    id
+  }
+  Ikechukwu_Ezenwa: createPlayer(data: { name: "Ikechukwu Ezenwa" }) {
+    id
+  }
+  Daniel_Akpeyi: createPlayer(data: { name: "Daniel Akpeyi" }) {
+    id
+  }
+  Francis_Uzoho: createPlayer(data: { name: "Francis Uzoho" }) {
+    id
+  }
+  William_Troost_Ekong: createPlayer(data: { name: " William Troost-Ekong" }) {
+    id
+  }
+  Leon_Balogun: createPlayer(data: { name: "Leon Balogun" }) {
+    id
+  }
+  Kenneth_Omeruo: createPlayer(data: { name: "Kenneth Omeruo" }) {
+    id
+  }
+  Bryan_Idowu: createPlayer(data: { name: "Bryan Idowu" }) {
+    id
+  }
+  Chidozie_Awaziem: createPlayer(data: { name: "Chidozie Awaziem" }) {
+    id
+  }
+  Abdullahi_Shehu: createPlayer(data: { name: "Abdullahi Shehu" }) {
+    id
+  }
+  Elderson_Echiejile: createPlayer(data: { name: "Elderson Echiejile" }) {
+    id
+  }
+  Tyronne_Ebuehi: createPlayer(data: { name: "Tyronne Ebuehi" }) {
+    id
+  }
+  John_Obi_Mikel: createPlayer(data: { name: " John Obi Mikel" }) {
+    id
+  }
+  Ogenyi_Onazi: createPlayer(data: { name: "Ogenyi Onazi" }) {
+    id
+  }
+  John_Ogu: createPlayer(data: { name: "John Ogu" }) {
+    id
+  }
+  Wilfred_Ndidi: createPlayer(data: { name: "Wilfred Ndidi" }) {
+    id
+  }
+  Oghenekaro_Etebo: createPlayer(data: { name: "Oghenekaro Etebo" }) {
+    id
+  }
+  Joel_Obi: createPlayer(data: { name: "Joel Obi" }) {
+    id
+  }
+  Odion_Ighalo: createPlayer(data: { name: " Odion Ighalo" }) {
+    id
+  }
+  Ahmed_Musa: createPlayer(data: { name: "Ahmed Musa" }) {
+    id
+  }
+  Victor_Moses: createPlayer(data: { name: "Victor Moses" }) {
+    id
+  }
+  Alex_Iwobi: createPlayer(data: { name: "Alex Iwobi" }) {
+    id
+  }
+  Kelechi_Iheanacho: createPlayer(data: { name: "Kelechi Iheanacho" }) {
+    id
+  }
+  Simeon_Nwankwo: createPlayer(data: { name: "Simeon Nwankwo" }) {
+    id
+  }
+  Alisson: createPlayer(data: { name: "Alisson" }) {
+    id
+  }
+  Ederson: createPlayer(data: { name: "Ederson" }) {
+    id
+  }
+  Cassio: createPlayer(data: { name: "Cassio" }) {
+    id
+  }
+  _Danilo: createPlayer(data: { name: " Danilo" }) {
+    id
+  }
+  Fagner: createPlayer(data: { name: "Fagner" }) {
+    id
+  }
+  Marcelo: createPlayer(data: { name: "Marcelo" }) {
+    id
+  }
+  Filipe_Luis: createPlayer(data: { name: "Filipe Luis" }) {
+    id
+  }
+  Thiago_Silva: createPlayer(data: { name: "Thiago Silva" }) {
+    id
+  }
+  Marquinhos: createPlayer(data: { name: "Marquinhos" }) {
+    id
+  }
+  Miranda: createPlayer(data: { name: "Miranda" }) {
+    id
+  }
+  Pedro_Geromel: createPlayer(data: { name: "Pedro Geromel" }) {
+    id
+  }
+  _Casemiro: createPlayer(data: { name: " Casemiro" }) {
+    id
+  }
+  Fernandinho: createPlayer(data: { name: "Fernandinho" }) {
+    id
+  }
+  Paulinho: createPlayer(data: { name: "Paulinho" }) {
+    id
+  }
+  Fred: createPlayer(data: { name: "Fred" }) {
+    id
+  }
+  Renato_Augusto: createPlayer(data: { name: "Renato Augusto" }) {
+    id
+  }
+  Philippe_Coutinho: createPlayer(data: { name: "Philippe Coutinho" }) {
+    id
+  }
+  Willian: createPlayer(data: { name: "Willian" }) {
+    id
+  }
+  Douglas_Costa: createPlayer(data: { name: "Douglas Costa" }) {
+    id
+  }
+  _Neymar: createPlayer(data: { name: " Neymar" }) {
+    id
+  }
+  Taison: createPlayer(data: { name: "Taison" }) {
+    id
+  }
+  Gabriel_Jesus: createPlayer(data: { name: "Gabriel Jesus" }) {
+    id
+  }
+  Roberto_Firmino: createPlayer(data: { name: "Roberto Firmino" }) {
+    id
+  }
+  Roman_Burki: createPlayer(data: { name: "Roman Burki" }) {
+    id
+  }
+  Yvon_Mvogo: createPlayer(data: { name: "Yvon Mvogo" }) {
+    id
+  }
+  Yann_Sommer: createPlayer(data: { name: "Yann Sommer" }) {
+    id
+  }
+  Manuel_Akanji: createPlayer(data: { name: " Manuel Akanji" }) {
+    id
+  }
+  Johan_Djourou: createPlayer(data: { name: "Johan Djourou" }) {
+    id
+  }
+  Nico_Elvedi: createPlayer(data: { name: "Nico Elvedi" }) {
+    id
+  }
+  Michael_Lang: createPlayer(data: { name: "Michael Lang" }) {
+    id
+  }
+  Stephan_Lichtsteiner: createPlayer(data: { name: "Stephan Lichtsteiner" }) {
+    id
+  }
+  Jacques_Francois_Moubandje: createPlayer(
+    data: { name: "Jacques-Francois Moubandje" }
+  ) {
+    id
+  }
+  Ricardo_Rodriguez: createPlayer(data: { name: "Ricardo Rodriguez" }) {
+    id
+  }
+  Fabian_Schaer: createPlayer(data: { name: "Fabian Schaer" }) {
+    id
+  }
+  Valon_Behrami: createPlayer(data: { name: " Valon Behrami" }) {
+    id
+  }
+  Blerim_Dzemaili: createPlayer(data: { name: "Blerim Dzemaili" }) {
+    id
+  }
+  Gelson_Fernandes: createPlayer(data: { name: "Gelson Fernandes" }) {
+    id
+  }
+  Remo_Freuler: createPlayer(data: { name: "Remo Freuler" }) {
+    id
+  }
+  Xherdan_Shaqiri: createPlayer(data: { name: "Xherdan Shaqiri" }) {
+    id
+  }
+  Granit_Xhaka: createPlayer(data: { name: "Granit Xhaka" }) {
+    id
+  }
+  Steven_Zuber: createPlayer(data: { name: "Steven Zuber" }) {
+    id
+  }
+  Denis_Zakaria: createPlayer(data: { name: "Denis Zakaria" }) {
+    id
+  }
+  Josip_Drmic: createPlayer(data: { name: " Josip Drmic" }) {
+    id
+  }
+  Breel_Embolo: createPlayer(data: { name: "Breel Embolo" }) {
+    id
+  }
+  Mario_Gavranovic: createPlayer(data: { name: "Mario Gavranovic" }) {
+    id
+  }
+  Haris_Seferovic: createPlayer(data: { name: "Haris Seferovic" }) {
+    id
+  }
+  Keylor_Navas: createPlayer(data: { name: "Keylor Navas" }) {
+    id
+  }
+  Patrick_Pemberton: createPlayer(data: { name: "Patrick Pemberton" }) {
+    id
+  }
+  Leonel_Moreira: createPlayer(data: { name: "Leonel Moreira" }) {
+    id
+  }
+  Cristian_Gamboa: createPlayer(data: { name: "Cristian Gamboa" }) {
+    id
+  }
+  Ian_Smith: createPlayer(data: { name: "Ian Smith" }) {
+    id
+  }
+  Ronald_Matarrita: createPlayer(data: { name: "Ronald Matarrita" }) {
+    id
+  }
+  Bryan_Oviedo: createPlayer(data: { name: "Bryan Oviedo" }) {
+    id
+  }
+  Oscar_Duarte: createPlayer(data: { name: "Oscar Duarte" }) {
+    id
+  }
+  Giancarlo_Gonzalez: createPlayer(data: { name: "Giancarlo Gonzalez" }) {
+    id
+  }
+  Francisco_Calvo: createPlayer(data: { name: "Francisco Calvo" }) {
+    id
+  }
+  Kendall_Waston: createPlayer(data: { name: "Kendall Waston" }) {
+    id
+  }
+  Johnny_Acosta: createPlayer(data: { name: "Johnny Acosta" }) {
+    id
+  }
+  David_Guzman: createPlayer(data: { name: "David Guzman" }) {
+    id
+  }
+  Yeltsin_Tejeda: createPlayer(data: { name: "Yeltsin Tejeda" }) {
+    id
+  }
+  Celso_Borges: createPlayer(data: { name: "Celso Borges" }) {
+    id
+  }
+  Randall_Azofeifa: createPlayer(data: { name: "Randall Azofeifa" }) {
+    id
+  }
+  Rodney_Wallace: createPlayer(data: { name: "Rodney Wallace" }) {
+    id
+  }
+  Bryan_Ruiz: createPlayer(data: { name: "Bryan Ruiz" }) {
+    id
+  }
+  Daniel_Colindres: createPlayer(data: { name: "Daniel Colindres" }) {
+    id
+  }
+  Christian_Bolanos: createPlayer(data: { name: "Christian Bolanos" }) {
+    id
+  }
+  Johan_Venegas: createPlayer(data: { name: "Johan Venegas" }) {
+    id
+  }
+  Joel_Campbell: createPlayer(data: { name: "Joel Campbell" }) {
+    id
+  }
+  Marco_Urena: createPlayer(data: { name: "Marco Urena" }) {
+    id
+  }
+  Vladimir_Stojkovic: createPlayer(data: { name: "Vladimir Stojkovic" }) {
+    id
+  }
+  Predrag_Rajkovic: createPlayer(data: { name: "Predrag Rajkovic" }) {
+    id
+  }
+  Marko_Dmitrovic: createPlayer(data: { name: "Marko Dmitrovic" }) {
+    id
+  }
+  Aleksandar_Kolarov: createPlayer(data: { name: "Aleksandar Kolarov" }) {
+    id
+  }
+  Antonio_Rukavina: createPlayer(data: { name: "Antonio Rukavina" }) {
+    id
+  }
+  Milan_Rodic: createPlayer(data: { name: "Milan Rodic" }) {
+    id
+  }
+  Branislav_Ivanovic: createPlayer(data: { name: "Branislav Ivanovic" }) {
+    id
+  }
+  Uros_Spajic: createPlayer(data: { name: "Uros Spajic" }) {
+    id
+  }
+  Milos_Veljkovic: createPlayer(data: { name: "Milos Veljkovic" }) {
+    id
+  }
+  Dusko_Tosic: createPlayer(data: { name: "Dusko Tosic" }) {
+    id
+  }
+  Nikola_Milenkovic: createPlayer(data: { name: "Nikola Milenkovic" }) {
+    id
+  }
+  Nemanja_Matic: createPlayer(data: { name: " Nemanja Matic" }) {
+    id
+  }
+  Luka_Milivojevic: createPlayer(data: { name: "Luka Milivojevic" }) {
+    id
+  }
+  Marko_Grujic: createPlayer(data: { name: "Marko Grujic" }) {
+    id
+  }
+  Dusan_Tadic: createPlayer(data: { name: "Dusan Tadic" }) {
+    id
+  }
+  Andrija_Zivkovic: createPlayer(data: { name: "Andrija Zivkovic" }) {
+    id
+  }
+  Filip_Kostic: createPlayer(data: { name: "Filip Kostic" }) {
+    id
+  }
+  Nemanja_Radonjic: createPlayer(data: { name: "Nemanja Radonjic" }) {
+    id
+  }
+  Sergej_Milinkovic_Savic: createPlayer(
+    data: { name: "Sergej Milinkovic-Savic" }
+  ) {
+    id
+  }
+  Adem_Ljajic: createPlayer(data: { name: "Adem Ljajic" }) {
+    id
+  }
+  Aleksandar_Mitrovic: createPlayer(data: { name: " Aleksandar Mitrovic" }) {
+    id
+  }
+  Aleksandar_Prijovic: createPlayer(data: { name: "Aleksandar Prijovic" }) {
+    id
+  }
+  Luka_Jovic: createPlayer(data: { name: "Luka Jovic" }) {
+    id
+  }
+  Manuel_Neuer: createPlayer(data: { name: "Manuel Neuer" }) {
+    id
+  }
+  Marc_Andre_ter_Stegen: createPlayer(data: { name: "Marc-Andre ter Stegen" }) {
+    id
+  }
+  Kevin_Trapp: createPlayer(data: { name: "Kevin Trapp" }) {
+    id
+  }
+  Jerome_Boateng: createPlayer(data: { name: " Jerome Boateng" }) {
+    id
+  }
+  Matthias_Ginter: createPlayer(data: { name: "Matthias Ginter" }) {
+    id
+  }
+  Jonas_Hector: createPlayer(data: { name: "Jonas Hector" }) {
+    id
+  }
+  Mats_Hummels: createPlayer(data: { name: "Mats Hummels" }) {
+    id
+  }
+  Joshua_Kimmich: createPlayer(data: { name: "Joshua Kimmich" }) {
+    id
+  }
+  Marvin_Plattenhardt: createPlayer(data: { name: "Marvin Plattenhardt" }) {
+    id
+  }
+  Antonio_Rudiger: createPlayer(data: { name: "Antonio Rudiger" }) {
+    id
+  }
+  Niklas_Sule: createPlayer(data: { name: "Niklas Sule" }) {
+    id
+  }
+  Julian_Brandt: createPlayer(data: { name: " Julian Brandt" }) {
+    id
+  }
+  Julian_Draxler: createPlayer(data: { name: "Julian Draxler" }) {
+    id
+  }
+  Mario_Gomez: createPlayer(data: { name: "Mario Gomez" }) {
+    id
+  }
+  Leon_Goretzka: createPlayer(data: { name: "Leon Goretzka" }) {
+    id
+  }
+  Ilkay_Gundogan: createPlayer(data: { name: "Ilkay Gundogan" }) {
+    id
+  }
+  Sami_Khedira: createPlayer(data: { name: "Sami Khedira" }) {
+    id
+  }
+  Toni_Kroos: createPlayer(data: { name: "Toni Kroos" }) {
+    id
+  }
+  Thomas_Muller: createPlayer(data: { name: "Thomas Muller" }) {
+    id
+  }
+  Mesut_Ozil: createPlayer(data: { name: "Mesut Ozil" }) {
+    id
+  }
+  Marco_Reus: createPlayer(data: { name: "Marco Reus" }) {
+    id
+  }
+  Sebastian_Rudy: createPlayer(data: { name: "Sebastian Rudy" }) {
+    id
+  }
+  Timo_Werner: createPlayer(data: { name: "Timo Werner" }) {
+    id
+  }
+  Jesus_Corona: createPlayer(data: { name: "Jesus Corona" }) {
+    id
+  }
+  Alfredo_Talavera: createPlayer(data: { name: "Alfredo Talavera" }) {
+    id
+  }
+  Guillermo_Ochoa: createPlayer(data: { name: "Guillermo Ochoa" }) {
+    id
+  }
+  Hugo_Ayala: createPlayer(data: { name: " Hugo Ayala" }) {
+    id
+  }
+  Carlos_Salcedo: createPlayer(data: { name: "Carlos Salcedo" }) {
+    id
+  }
+  Diego_Reyes: createPlayer(data: { name: "Diego Reyes" }) {
+    id
+  }
+  Miguel_Layun: createPlayer(data: { name: "Miguel Layun" }) {
+    id
+  }
+  Hector_Moreno: createPlayer(data: { name: "Hector Moreno" }) {
+    id
+  }
+  Edson_Alvarez: createPlayer(data: { name: "Edson Alvarez" }) {
+    id
+  }
+  Rafael_Marquez: createPlayer(data: { name: " Rafael Marquez" }) {
+    id
+  }
+  Jonathan_dos_Santos: createPlayer(data: { name: "Jonathan dos Santos" }) {
+    id
+  }
+  Marco_Fabian: createPlayer(data: { name: "Marco Fabian" }) {
+    id
+  }
+  Giovani_dos_Santos: createPlayer(data: { name: "Giovani dos Santos" }) {
+    id
+  }
+  Hector_Herrera: createPlayer(data: { name: "Hector Herrera" }) {
+    id
+  }
+  Andres_Guardado: createPlayer(data: { name: "Andres Guardado" }) {
+    id
+  }
+  Raul_Jimenez: createPlayer(data: { name: " Raul Jimenez" }) {
+    id
+  }
+  Carlos_Vela: createPlayer(data: { name: "Carlos Vela" }) {
+    id
+  }
+  Javier_Hernandez: createPlayer(data: { name: "Javier Hernandez" }) {
+    id
+  }
+  Jesus_Corona: createPlayer(data: { name: "Jesus Corona" }) {
+    id
+  }
+  Oribe_Peralta: createPlayer(data: { name: "Oribe Peralta" }) {
+    id
+  }
+  Javier_Aquino: createPlayer(data: { name: "Javier Aquino" }) {
+    id
+  }
+  Hirving_Lozano: createPlayer(data: { name: "Hirving Lozano" }) {
+    id
+  }
+  Robin_Olsen: createPlayer(data: { name: "Robin Olsen" }) {
+    id
+  }
+  Karl_Johan_Johnsson: createPlayer(data: { name: "Karl-Johan Johnsson" }) {
+    id
+  }
+  Kristoffer_Nordfeldt: createPlayer(data: { name: "Kristoffer Nordfeldt" }) {
+    id
+  }
+  Mikael_Lustig: createPlayer(data: { name: "Mikael Lustig" }) {
+    id
+  }
+  Victor_Lindelof: createPlayer(data: { name: "Victor Lindelof" }) {
+    id
+  }
+  Andreas_Granqvist: createPlayer(data: { name: "Andreas Granqvist" }) {
+    id
+  }
+  Martin_Olsson: createPlayer(data: { name: "Martin Olsson" }) {
+    id
+  }
+  Ludwig_Augustinsson: createPlayer(data: { name: "Ludwig Augustinsson" }) {
+    id
+  }
+  Filip_Helander: createPlayer(data: { name: "Filip Helander" }) {
+    id
+  }
+  Emil_Krafth: createPlayer(data: { name: "Emil Krafth" }) {
+    id
+  }
+  Pontus_Jansson: createPlayer(data: { name: "Pontus Jansson" }) {
+    id
+  }
+  Sebastian_Larsson: createPlayer(data: { name: "Sebastian Larsson" }) {
+    id
+  }
+  Albin_Ekdal: createPlayer(data: { name: "Albin Ekdal" }) {
+    id
+  }
+  Emil_Forsberg: createPlayer(data: { name: "Emil Forsberg" }) {
+    id
+  }
+  Gustav_Svensson: createPlayer(data: { name: "Gustav Svensson" }) {
+    id
+  }
+  Oscar_Hiljemark: createPlayer(data: { name: "Oscar Hiljemark" }) {
+    id
+  }
+  Viktor_Claesson: createPlayer(data: { name: "Viktor Claesson" }) {
+    id
+  }
+  Marcus_Rohden: createPlayer(data: { name: "Marcus Rohden" }) {
+    id
+  }
+  Jimmy_Durmaz: createPlayer(data: { name: "Jimmy Durmaz" }) {
+    id
+  }
+  Marcus_Berg: createPlayer(data: { name: "Marcus Berg" }) {
+    id
+  }
+  John_Guidetti: createPlayer(data: { name: "John Guidetti" }) {
+    id
+  }
+  Ola_Toivonen: createPlayer(data: { name: "Ola Toivonen" }) {
+    id
+  }
+  Isaac_Kiese_Thelin: createPlayer(data: { name: "Isaac Kiese Thelin" }) {
+    id
+  }
+  Kim_Seunggyu: createPlayer(data: { name: "Kim Seunggyu" }) {
+    id
+  }
+  Kim_Jinhyeon: createPlayer(data: { name: "Kim Jinhyeon" }) {
+    id
+  }
+  Cho_Hyeonwoo: createPlayer(data: { name: "Cho Hyeonwoo" }) {
+    id
+  }
+  Kim_Younggwon: createPlayer(data: { name: "Kim Younggwon" }) {
+    id
+  }
+  Jang_Hyunsoo: createPlayer(data: { name: "Jang Hyunsoo" }) {
+    id
+  }
+  Jeong_Seunghyeon: createPlayer(data: { name: "Jeong Seunghyeon" }) {
+    id
+  }
+  Yun_Yeongseon: createPlayer(data: { name: "Yun Yeongseon" }) {
+    id
+  }
+  Oh_Bansuk: createPlayer(data: { name: "Oh Bansuk" }) {
+    id
+  }
+  Kim_Minwoo: createPlayer(data: { name: "Kim Minwoo" }) {
+    id
+  }
+  Park_Jooho: createPlayer(data: { name: "Park Jooho" }) {
+    id
+  }
+  Hong_Chul: createPlayer(data: { name: "Hong Chul" }) {
+    id
+  }
+  Go_Yohan: createPlayer(data: { name: "Go Yohan" }) {
+    id
+  }
+  Lee_Yong: createPlayer(data: { name: "Lee Yong" }) {
+    id
+  }
+  Ki_Sungyueng: createPlayer(data: { name: "Ki Sungyueng" }) {
+    id
+  }
+  Jeong_Wooyoung: createPlayer(data: { name: "Jeong Wooyoung" }) {
+    id
+  }
+  Ju_Sejong: createPlayer(data: { name: "Ju Sejong" }) {
+    id
+  }
+  Koo_Jacheol: createPlayer(data: { name: "Koo Jacheol" }) {
+    id
+  }
+  Lee_Jaesung: createPlayer(data: { name: "Lee Jaesung" }) {
+    id
+  }
+  Lee_Seungwoo: createPlayer(data: { name: "Lee Seungwoo" }) {
+    id
+  }
+  Moon_Sunmin: createPlayer(data: { name: "Moon Sunmin" }) {
+    id
+  }
+  Kim_Shinwook: createPlayer(data: { name: "Kim Shinwook" }) {
+    id
+  }
+  Son_Heungmin: createPlayer(data: { name: "Son Heungmin" }) {
+    id
+  }
+  Hwang_Heechan: createPlayer(data: { name: "Hwang Heechan" }) {
+    id
+  }
+  Koen_Casteels: createPlayer(data: { name: "Koen Casteels" }) {
+    id
+  }
+  Thibaut_Courtois: createPlayer(data: { name: "Thibaut Courtois" }) {
+    id
+  }
+  Simon_Mignolet: createPlayer(data: { name: "Simon Mignolet" }) {
+    id
+  }
+  Toby_Alderweireld: createPlayer(data: { name: " Toby Alderweireld" }) {
+    id
+  }
+  Dedryck_Boyata: createPlayer(data: { name: "Dedryck Boyata" }) {
+    id
+  }
+  Vincent_Kompany: createPlayer(data: { name: "Vincent Kompany" }) {
+    id
+  }
+  Thomas_Meunier: createPlayer(data: { name: "Thomas Meunier" }) {
+    id
+  }
+  Thomas_Vermaelen: createPlayer(data: { name: "Thomas Vermaelen" }) {
+    id
+  }
+  Jan_Vertonghen: createPlayer(data: { name: "Jan Vertonghen" }) {
+    id
+  }
+  Nacer_Chadli: createPlayer(data: { name: " Nacer Chadli" }) {
+    id
+  }
+  Kevin_De_Bruyne: createPlayer(data: { name: "Kevin De Bruyne" }) {
+    id
+  }
+  Mousa_Dembele: createPlayer(data: { name: "Mousa Dembele" }) {
+    id
+  }
+  Leander_Dendoncker: createPlayer(data: { name: "Leander Dendoncker" }) {
+    id
+  }
+  Marouane_Fellaini: createPlayer(data: { name: "Marouane Fellaini" }) {
+    id
+  }
+  Youri_Tielemans: createPlayer(data: { name: "Youri Tielemans" }) {
+    id
+  }
+  Axel_Witsel: createPlayer(data: { name: "Axel Witsel" }) {
+    id
+  }
+  Michy_Batshuayi: createPlayer(data: { name: " Michy Batshuayi" }) {
+    id
+  }
+  Yannick_Carrasco: createPlayer(data: { name: "Yannick Carrasco" }) {
+    id
+  }
+  Eden_Hazard: createPlayer(data: { name: "Eden Hazard" }) {
+    id
+  }
+  Thorgan_Hazard: createPlayer(data: { name: "Thorgan Hazard" }) {
+    id
+  }
+  Adnan_Januzaj: createPlayer(data: { name: "Adnan Januzaj" }) {
+    id
+  }
+  Romelu_Lukaku: createPlayer(data: { name: "Romelu Lukaku" }) {
+    id
+  }
+  Dries_Mertens: createPlayer(data: { name: "Dries Mertens" }) {
+    id
+  }
+  Jose_Calderon: createPlayer(data: { name: "Jose Calderon" }) {
+    id
+  }
+  Jaime_Penedo: createPlayer(data: { name: "Jaime Penedo" }) {
+    id
+  }
+  Alex_Rodriguez: createPlayer(data: { name: "Alex Rodríguez" }) {
+    id
+  }
+  Felipe_Baloy: createPlayer(data: { name: " Felipe Baloy" }) {
+    id
+  }
+  Harold_Cummings: createPlayer(data: { name: "Harold Cummings" }) {
+    id
+  }
+  Eric_Davis: createPlayer(data: { name: "Eric Davis" }) {
+    id
+  }
+  Fidel_Escobar: createPlayer(data: { name: "Fidel Escobar" }) {
+    id
+  }
+  Adolfo_Machado: createPlayer(data: { name: "Adolfo Machado" }) {
+    id
+  }
+  Michael_Murillo: createPlayer(data: { name: "Michael Murillo" }) {
+    id
+  }
+  Luis_Ovalle: createPlayer(data: { name: "Luis Ovalle" }) {
+    id
+  }
+  Roman_Torres: createPlayer(data: { name: "Roman Torres" }) {
+    id
+  }
+  Edgar_Barcenas: createPlayer(data: { name: " Edgar Barcenas" }) {
+    id
+  }
+  Armando_Cooper: createPlayer(data: { name: "Armando Cooper" }) {
+    id
+  }
+  Anibal_Godoy: createPlayer(data: { name: "Anibal Godoy" }) {
+    id
+  }
+  Gabriel_Gomez: createPlayer(data: { name: "Gabriel Gomez" }) {
+    id
+  }
+  Valentin_Pimentel: createPlayer(data: { name: "Valentin Pimentel" }) {
+    id
+  }
+  Alberto_Quintero: createPlayer(data: { name: "Alberto Quintero" }) {
+    id
+  }
+  Jose_Luis_Rodriguez: createPlayer(data: { name: "Jose Luis Rodriguez" }) {
+    id
+  }
+  Abdiel_Arroyo: createPlayer(data: { name: " Abdiel Arroyo" }) {
+    id
+  }
+  Ismael_Diaz: createPlayer(data: { name: "Ismael Diaz" }) {
+    id
+  }
+  Blas_Perez: createPlayer(data: { name: "Blas Perez" }) {
+    id
+  }
+  Luis_Tejada: createPlayer(data: { name: "Luis Tejada" }) {
+    id
+  }
+  Gabriel_Torres: createPlayer(data: { name: "Gabriel Torres" }) {
+    id
+  }
+  Farouk_Ben_Mustapha: createPlayer(data: { name: "Farouk Ben Mustapha" }) {
+    id
+  }
+  Moez_Hassen: createPlayer(data: { name: "Moez Hassen" }) {
+    id
+  }
+  Aymen_Mathlouthi: createPlayer(data: { name: "Aymen Mathlouthi" }) {
+    id
+  }
+  Rami_Bedoui: createPlayer(data: { name: "Rami Bedoui" }) {
+    id
+  }
+  Yohan_Benalouane: createPlayer(data: { name: "Yohan Benalouane" }) {
+    id
+  }
+  Syam_Ben_Youssef: createPlayer(data: { name: "Syam Ben Youssef" }) {
+    id
+  }
+  Dylan_Bronn: createPlayer(data: { name: "Dylan Bronn" }) {
+    id
+  }
+  Oussama_Haddadi: createPlayer(data: { name: "Oussama Haddadi" }) {
+    id
+  }
+  Ali_Maaloul: createPlayer(data: { name: "Ali Maaloul" }) {
+    id
+  }
+  Yassine_Meriah: createPlayer(data: { name: "Yassine Meriah" }) {
+    id
+  }
+  Hamdi_Nagguez: createPlayer(data: { name: "Hamdi Nagguez" }) {
+    id
+  }
+  Anice_Badri: createPlayer(data: { name: "Anice Badri" }) {
+    id
+  }
+  Mohamed_Amine_Ben_Amor: createPlayer(
+    data: { name: "Mohamed Amine Ben Amor" }
+  ) {
+    id
+  }
+  Ghaylene_Chaalali: createPlayer(data: { name: "Ghaylene Chaalali" }) {
+    id
+  }
+  Ahmed_Khalil: createPlayer(data: { name: "Ahmed Khalil" }) {
+    id
+  }
+  Saifeddine_Khaoui: createPlayer(data: { name: "Saifeddine Khaoui" }) {
+    id
+  }
+  Ferjani_Sassi: createPlayer(data: { name: "Ferjani Sassi" }) {
+    id
+  }
+  Ellyes_Skhiri: createPlayer(data: { name: "Ellyes Skhiri" }) {
+    id
+  }
+  Naim_Sliti: createPlayer(data: { name: "Naim Sliti" }) {
+    id
+  }
+  Bassem_Srarfi: createPlayer(data: { name: "Bassem Srarfi" }) {
+    id
+  }
+  Fakhreddine_Ben_Youssef: createPlayer(
+    data: { name: "Fakhreddine Ben Youssef" }
+  ) {
+    id
+  }
+  Saber_Khalifa: createPlayer(data: { name: "Saber Khalifa" }) {
+    id
+  }
+  Wahbi_Khazri: createPlayer(data: { name: "Wahbi Khazri" }) {
+    id
+  }
+  Jack_Butland: createPlayer(data: { name: "Jack Butland" }) {
+    id
+  }
+  Nick_Pope: createPlayer(data: { name: "Nick Pope" }) {
+    id
+  }
+  Jordan_Pickford: createPlayer(data: { name: "Jordan Pickford" }) {
+    id
+  }
+  Fabian_Delph: createPlayer(data: { name: " Fabian Delph" }) {
+    id
+  }
+  Danny_Rose: createPlayer(data: { name: "Danny Rose" }) {
+    id
+  }
+  Eric_Dier: createPlayer(data: { name: "Eric Dier" }) {
+    id
+  }
+  Kyle_Walker: createPlayer(data: { name: "Kyle Walker" }) {
+    id
+  }
+  Kieran_Trippier: createPlayer(data: { name: "Kieran Trippier" }) {
+    id
+  }
+  Trent_Alexander_Arnold: createPlayer(
+    data: { name: "Trent Alexander-Arnold" }
+  ) {
+    id
+  }
+  Harry_Maguire: createPlayer(data: { name: "Harry Maguire" }) {
+    id
+  }
+  John_Stones: createPlayer(data: { name: "John Stones" }) {
+    id
+  }
+  Phil_Jones: createPlayer(data: { name: "Phil Jones" }) {
+    id
+  }
+  Gary_Cahill: createPlayer(data: { name: "Gary Cahill" }) {
+    id
+  }
+  Jordan_Henderson: createPlayer(data: { name: " Jordan Henderson" }) {
+    id
+  }
+  Jesse_Lingard: createPlayer(data: { name: "Jesse Lingard" }) {
+    id
+  }
+  Ruben_Loftus_Cheek: createPlayer(data: { name: "Ruben Loftus-Cheek" }) {
+    id
+  }
+  Ashley_Young: createPlayer(data: { name: "Ashley Young" }) {
+    id
+  }
+  Dele_Alli: createPlayer(data: { name: "Dele Alli" }) {
+    id
+  }
+  Raheem_Sterling: createPlayer(data: { name: "Raheem Sterling" }) {
+    id
+  }
+  Harry_Kane: createPlayer(data: { name: " Harry Kane" }) {
+    id
+  }
+  Jamie_Vardy: createPlayer(data: { name: "Jamie Vardy" }) {
+    id
+  }
+  Marcus_Rashford: createPlayer(data: { name: "Marcus Rashford" }) {
+    id
+  }
+  Danny_Welbeck: createPlayer(data: { name: "Danny Welbeck" }) {
+    id
+  }
+  Bartosz_Bialkowski: createPlayer(data: { name: "Bartosz Bialkowski" }) {
+    id
+  }
+  Lukasz_Fabianski: createPlayer(data: { name: "Lukasz Fabianski" }) {
+    id
+  }
+  Wojciech_Szczesny: createPlayer(data: { name: "Wojciech Szczesny" }) {
+    id
+  }
+  Jan_Bednarek: createPlayer(data: { name: " Jan Bednarek" }) {
+    id
+  }
+  Bartosz_Bereszynski: createPlayer(data: { name: "Bartosz Bereszynski" }) {
+    id
+  }
+  Thiago_Cionek: createPlayer(data: { name: "Thiago Cionek" }) {
+    id
+  }
+  Kamil_Glik: createPlayer(data: { name: "Kamil Glik" }) {
+    id
+  }
+  Artur_Jedrzejczyk: createPlayer(data: { name: "Artur Jedrzejczyk" }) {
+    id
+  }
+  Michal_Pazdan: createPlayer(data: { name: "Michal Pazdan" }) {
+    id
+  }
+  Lukasz_Piszczek: createPlayer(data: { name: "Lukasz Piszczek" }) {
+    id
+  }
+  Jakub_Blaszczykowski: createPlayer(data: { name: " Jakub Blaszczykowski" }) {
+    id
+  }
+  Jacek_Goralski: createPlayer(data: { name: "Jacek Goralski" }) {
+    id
+  }
+  Kamil_Goricki: createPlayer(data: { name: "Kamil Goricki" }) {
+    id
+  }
+  Grzegorz_Krychowiak: createPlayer(data: { name: "Grzegorz Krychowiak" }) {
+    id
+  }
+  Slawomir_Peszko: createPlayer(data: { name: "Slawomir Peszko" }) {
+    id
+  }
+  Maciej_Rybus: createPlayer(data: { name: "Maciej Rybus" }) {
+    id
+  }
+  Piotr_Zielinski: createPlayer(data: { name: "Piotr Zielinski" }) {
+    id
+  }
+  Rafal_Kurzawa: createPlayer(data: { name: "Rafal Kurzawa" }) {
+    id
+  }
+  Karol_Linetty: createPlayer(data: { name: "Karol Linetty" }) {
+    id
+  }
+  Dawid_Kownacki: createPlayer(data: { name: " Dawid Kownacki" }) {
+    id
+  }
+  Robert_Lewandowski: createPlayer(data: { name: "Robert Lewandowski" }) {
+    id
+  }
+  Arkadiusz_Milik: createPlayer(data: { name: "Arkadiusz Milik" }) {
+    id
+  }
+  Lukasz_Teodorczyk: createPlayer(data: { name: "Lukasz Teodorczyk" }) {
+    id
+  }
+  Abdoulaye_Diallo: createPlayer(data: { name: "Abdoulaye Diallo" }) {
+    id
+  }
+  Khadim_Ndiaye: createPlayer(data: { name: "Khadim Ndiaye" }) {
+    id
+  }
+  Alfred_Gomis: createPlayer(data: { name: "Alfred Gomis" }) {
+    id
+  }
+  Lamine_Gassama: createPlayer(data: { name: "Lamine Gassama" }) {
+    id
+  }
+  Moussa_Wague: createPlayer(data: { name: "Moussa Wague" }) {
+    id
+  }
+  Saliou_Ciss: createPlayer(data: { name: "Saliou Ciss" }) {
+    id
+  }
+  Youssouf_Sabaly: createPlayer(data: { name: "Youssouf Sabaly" }) {
+    id
+  }
+  Kalidou_Koulibaly: createPlayer(data: { name: "Kalidou Koulibaly" }) {
+    id
+  }
+  Salif_Sane: createPlayer(data: { name: "Salif Sane" }) {
+    id
+  }
+  Cheikhou_Kouyate: createPlayer(data: { name: "Cheikhou Kouyate" }) {
+    id
+  }
+  Kara_Mbodji: createPlayer(data: { name: "Kara Mbodji" }) {
+    id
+  }
+  Idrisa_Gana_Gueye: createPlayer(data: { name: "Idrisa Gana Gueye" }) {
+    id
+  }
+  Cheikh_Ndoye: createPlayer(data: { name: "Cheikh Ndoye" }) {
+    id
+  }
+  Alfred_Ndiaye: createPlayer(data: { name: "Alfred Ndiaye" }) {
+    id
+  }
+  Pape_Alioune_Ndiaye: createPlayer(data: { name: "Pape Alioune Ndiaye" }) {
+    id
+  }
+  Moussa_Sow: createPlayer(data: { name: "Moussa Sow" }) {
+    id
+  }
+  Moussa_Konate: createPlayer(data: { name: "Moussa Konate" }) {
+    id
+  }
+  Diafra_Sakho: createPlayer(data: { name: "Diafra Sakho" }) {
+    id
+  }
+  Sadio_Mane: createPlayer(data: { name: "Sadio Mane" }) {
+    id
+  }
+  Ismaila_Sarr: createPlayer(data: { name: "Ismaila Sarr" }) {
+    id
+  }
+  Mame_Biram_Diouf: createPlayer(data: { name: "Mame Biram Diouf" }) {
+    id
+  }
+  Mbaye_Niang: createPlayer(data: { name: "Mbaye Niang" }) {
+    id
+  }
+  Diao_Keita_Balde: createPlayer(data: { name: "Diao Keita Balde" }) {
+    id
+  }
+  David_Ospina: createPlayer(data: { name: "David Ospina" }) {
+    id
+  }
+  Camilo_Vargas: createPlayer(data: { name: "Camilo Vargas" }) {
+    id
+  }
+  Jose_Fernando_Cuadrado: createPlayer(
+    data: { name: "Jose Fernando Cuadrado" }
+  ) {
+    id
+  }
+  Cristian_Zapata: createPlayer(data: { name: " Cristian Zapata" }) {
+    id
+  }
+  Davinson_Sanchez: createPlayer(data: { name: "Davinson Sanchez" }) {
+    id
+  }
+  Santiago_Arias: createPlayer(data: { name: "Santiago Arias" }) {
+    id
+  }
+  Oscar_Murillo: createPlayer(data: { name: "Oscar Murillo" }) {
+    id
+  }
+  Frank_Fabra: createPlayer(data: { name: "Frank Fabra" }) {
+    id
+  }
+  Johan_Mojica: createPlayer(data: { name: "Johan Mojica" }) {
+    id
+  }
+  Yerry_Mina: createPlayer(data: { name: "Yerry Mina" }) {
+    id
+  }
+  Wilmar_Barrios: createPlayer(data: { name: " Wilmar Barrios" }) {
+    id
+  }
+  Carlos_Sanchez: createPlayer(data: { name: "Carlos Sanchez" }) {
+    id
+  }
+  Jefferson_Lerma: createPlayer(data: { name: "Jefferson Lerma" }) {
+    id
+  }
+  Jose_Izquierdo: createPlayer(data: { name: "Jose Izquierdo" }) {
+    id
+  }
+  James_Rodriguez: createPlayer(data: { name: "James Rodriguez" }) {
+    id
+  }
+  Abel_Aguilar: createPlayer(data: { name: "Abel Aguilar" }) {
+    id
+  }
+  Juan_Fernando_Quintero: createPlayer(
+    data: { name: "Juan Fernando Quintero" }
+  ) {
+    id
+  }
+  Mateus_Uribe: createPlayer(data: { name: "Mateus Uribe" }) {
+    id
+  }
+  Juan_Guillermo_Cuadrado: createPlayer(
+    data: { name: "Juan Guillermo Cuadrado" }
+  ) {
+    id
+  }
+  Radamel_Falcao_Garcia: createPlayer(
+    data: { name: " Radamel Falcao Garcia" }
+  ) {
+    id
+  }
+  Miguel_Borja: createPlayer(data: { name: "Miguel Borja" }) {
+    id
+  }
+  Carlos_Bacca: createPlayer(data: { name: "Carlos Bacca" }) {
+    id
+  }
+  Luis_Fernando_Muriel: createPlayer(data: { name: "Luis Fernando Muriel" }) {
+    id
+  }
+  Eiji_Kawashima: createPlayer(data: { name: "Eiji Kawashima" }) {
+    id
+  }
+  Masaaki_Higashiguchi: createPlayer(data: { name: "Masaaki Higashiguchi" }) {
+    id
+  }
+  Kosuke_Nakamura: createPlayer(data: { name: "Kosuke Nakamura" }) {
+    id
+  }
+  Yuto_Nagatomo: createPlayer(data: { name: "Yuto Nagatomo" }) {
+    id
+  }
+  Tomoaki_Makino: createPlayer(data: { name: "Tomoaki Makino" }) {
+    id
+  }
+  Maya_Yoshida: createPlayer(data: { name: "Maya Yoshida" }) {
+    id
+  }
+  Hiroki_Sakai: createPlayer(data: { name: "Hiroki Sakai" }) {
+    id
+  }
+  Gotoku_Sakai: createPlayer(data: { name: "Gotoku Sakai" }) {
+    id
+  }
+  Gen_Shoji: createPlayer(data: { name: "Gen Shoji" }) {
+    id
+  }
+  Wataru_Endo: createPlayer(data: { name: "Wataru Endo" }) {
+    id
+  }
+  Naomichi_Ueda: createPlayer(data: { name: "Naomichi Ueda" }) {
+    id
+  }
+  Makoto_Hasebe: createPlayer(data: { name: "Makoto Hasebe" }) {
+    id
+  }
+  Keisuke_Honda: createPlayer(data: { name: "Keisuke Honda" }) {
+    id
+  }
+  Takashi_Inui: createPlayer(data: { name: "Takashi Inui" }) {
+    id
+  }
+  Shinji_Kagawa: createPlayer(data: { name: "Shinji Kagawa" }) {
+    id
+  }
+  Hotaru_Yamaguchi: createPlayer(data: { name: "Hotaru Yamaguchi" }) {
+    id
+  }
+  Genki_Haraguchi: createPlayer(data: { name: "Genki Haraguchi" }) {
+    id
+  }
+  Takashi_Usami: createPlayer(data: { name: "Takashi Usami" }) {
+    id
+  }
+  Gaku_Shibasaki: createPlayer(data: { name: "Gaku Shibasaki" }) {
+    id
+  }
+  Ryota_Oshima: createPlayer(data: { name: "Ryota Oshima" }) {
+    id
+  }
+  Shinji_Okazaki: createPlayer(data: { name: "Shinji Okazaki" }) {
+    id
+  }
+  Yuya_Osako: createPlayer(data: { name: "Yuya Osako" }) {
+    id
+  }
+  Yoshinori_Muto: createPlayer(data: { name: "Yoshinori Muto" }) {
+    id
+  }
+}
