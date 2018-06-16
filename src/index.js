@@ -7,9 +7,8 @@ import {
 } from 'react-router-dom';
 import {ApolloProvider} from 'react-apollo';
 import ApolloClient from 'apollo-boost';
-import {ApolloLink} from 'apollo-client-preset';
-import {HttpLink} from 'apollo-link-http';
 import {InMemoryCache} from 'apollo-cache-inmemory';
+import {setContext} from 'apollo-link-context';
 
 import {AUTH_TOKEN} from './constants/constants';
 
@@ -21,25 +20,23 @@ import './index.css';
 import loginPage from './pages/loginPage';
 import signupPage from './pages/signupPage';
 
-const httpLink = new HttpLink({uri: `http://localhost:4000`});
 
-const middlewareAuthLink = new ApolloLink((operation, forward) => {
+const authLink = setContext((_, {headers}) => {
+    // get the authentication token from local storage if it exists
     const token = localStorage.getItem(AUTH_TOKEN);
-    const authorizationHeader = token ? `Bearer ${token}` : null;
-    operation.setContext({
+    // return the headers to the context so httpLink can read them
+    return {
         headers: {
-            authorization: authorizationHeader
+            ...headers,
+            authorization: token ? `Bearer ${token}` : "",
         }
-    });
-
-    return forward(operation);
-})
-
-const httpLinkWithAuthToken = middlewareAuthLink.concat(httpLink);
+    }
+});
 
 const client = new ApolloClient({
-    link: httpLinkWithAuthToken,
-    cache: new InMemoryCache()
+    link: authLink,
+    cache: new InMemoryCache(),
+    uri: 'http://localhost:4000'
 });
 
 ReactDOM.render(
