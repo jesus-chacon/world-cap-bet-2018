@@ -1,8 +1,8 @@
 # import Post from "./generated/prisma.graphql"
 
 type Query {
-    players: [Player!]!
-    countries: [Country!]!
+    players(search: String): [Player!]!
+    countries(search: String): [Country!]!
     me: User
 }
 
