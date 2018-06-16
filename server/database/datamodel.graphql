@@ -5,11 +5,17 @@ type User {
     name: String
     bet: Bet
     type: Type @default(value: "BET")
+    role: [Role!]! @default(value: ["USER"])
 }
 
 enum Type {
     BET
     SOLUTION
+}
+
+enum Role {
+    ADMIN
+    USER
 }
 
 type Country {
