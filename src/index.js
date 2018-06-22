@@ -20,7 +20,10 @@ import './index.css';
 // PAGES
 import loginPage from './pages/loginPage';
 import signupPage from './pages/signupPage';
+import mainPage from './pages/mainPage';
 
+// COMPONENTS
+import PrivateRoute from './components/privateRoute';
 
 const authLink = setContext((_, {headers}) => {
     // get the authentication token from local storage if it exists
@@ -47,6 +50,7 @@ ReactDOM.render(
                 <Switch>
                     <Route exact path="/login" component={loginPage} />
                     <Route exact path="/signup" component={signupPage} />
+                    <PrivateRoute exact path="/" component={mainPage} />
                 </Switch>
             </Fragment>
         </Router>
