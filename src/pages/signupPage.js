@@ -4,7 +4,7 @@ import {graphql, compose} from 'react-apollo';
 import gql from 'graphql-tag';
 
 import {AUTH_TOKEN} from '../constants/constants';
-import './loginPage.css';
+import '../styles/loginPage.css';
 
 class SignupPage extends Component {
     state = {
@@ -22,6 +22,7 @@ class SignupPage extends Component {
                     <div className="col-xs-10 col-sm-8 col-md-6 col-lg-4">
                         <div className="card login-card">
                             <h5 className="card-header">Login</h5>
+
                             <div className="card-body">
                                 <div className="form-group">
                                     <label>Name</label>
@@ -29,41 +30,45 @@ class SignupPage extends Component {
                                         type="text"
                                         className="form-control"
                                         value={this.state.name}
-                                        onChange={e => this.setState({name: e.target.value})} />
+                                        onChange={e => this.setState({name: e.target.value})}
+                                        required />
                                 </div>
 
                                 <div className="form-group">
                                     <label>Email</label>
                                     <input
-                                        type="text"
+                                        type="email"
                                         className="form-control"
                                         value={this.state.email}
-                                        onChange={e => this.setState({email: e.target.value})} />
+                                        onChange={e => this.setState({email: e.target.value})}
+                                        required />
                                 </div>
 
                                 <div className="form-group">
                                     <label>Password</label>
                                     <input
                                         type="password"
-                                        className="form-control"
+                                        className={`form-control ${this.state.errorPassword ? 'is-invalid' : ''}`}
                                         value={this.state.password}
-                                        onChange={e => this.setState({password: e.target.value})} />
+                                        onChange={e => this.setState({password: e.target.value})}
+                                        required />
                                 </div>
 
-                                <div className={`form-group ${this.state.errorPassword ? 'has-error' : ''}`}>
+                                <div className="form-group">
                                     <label>Confirm Password</label>
                                     <input
                                         type="password"
-                                        className="form-control"
+                                        className={`form-control ${this.state.errorPassword ? 'is-invalid' : ''}`}
                                         value={this.state.confPassword}
-                                        onChange={e => this.setState({confPassword: e.target.value})} />
+                                        onChange={e => this.setState({confPassword: e.target.value})}
+                                        required />
                                 </div>
 
                                 <div className="form-group">
                                     <button className="btn btn-primary" onClick={this._signup}>Signup</button>
                                 </div>
 
-                                <Link to="/">I not have account yet</Link>
+                                <Link to="/">I have account</Link>
                             </div>
                         </div>
                     </div>
@@ -75,24 +80,22 @@ class SignupPage extends Component {
     _signup = async () => {
         const {name, email, password, confPassword} = this.state;
 
-        if (password !== confPassword) {
+        if (password.trim().length === 0 || password !== confPassword) {
             this.setState({errorPassword: true});
         } else {
             const result = await this.props.signupMutation({
                 variables: {name, email, password},
             });
 
-            console.log(result);
-
             const {token} = result.data.signup;
             this._saveUserData(token);
 
-            //this.props.history.push(`/`)
+            this.props.history.push(`/`);
         }
     }
 
     _saveUserData = token => {
-        localStorage.setItem(AUTH_TOKEN, token)
+        localStorage.setItem(AUTH_TOKEN, token);
     }
 }
 
