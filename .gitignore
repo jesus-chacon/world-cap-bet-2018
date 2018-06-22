@@ -24,3 +24,4 @@ yarn.lock
 
 # React app
 src/*.css
+src/styles/*.css
