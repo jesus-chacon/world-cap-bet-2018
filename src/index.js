@@ -17,6 +17,7 @@ import '../node_modules/flag-icon-css/css/flag-icon.min.css';
 
 import './index.css';
 
+// PAGES
 import loginPage from './pages/loginPage';
 import signupPage from './pages/signupPage';
 
@@ -44,11 +45,11 @@ ReactDOM.render(
         <Router>
             <Fragment>
                 <Switch>
-                    <Route exact path="/" component={loginPage} />
+                    <Route exact path="/login" component={loginPage} />
                     <Route exact path="/signup" component={signupPage} />
                 </Switch>
             </Fragment>
         </Router>
     </ApolloProvider>,
     document.getElementById('root'),
-)
+);
