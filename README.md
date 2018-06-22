@@ -3,7 +3,7 @@
 ## Stack
 
 * [Prisma.io](https://www.prisma.io/)
-* [React.js](https://reactjs.org/) - awesome web-based text editor
+* [React.js](https://reactjs.org/)
 
 ## Requirements
 
