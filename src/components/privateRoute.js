@@ -1,24 +1,19 @@
-import React from "react";
-import {
-    Route,
-    Redirect,
-} from "react-router-dom";
+import React, {Component} from 'react';
+import {Route, Redirect} from 'react-router-dom';
 
-const PrivateRoute = ({component: Component, ...rest}) => (
-    <Route
-        {...rest}
+import {AUTH_TOKEN} from '../constants/constants';
+class PrivateRoute extends Component {
+    render() {
+        const token = localStorage.getItem(AUTH_TOKEN);
 
-        render={props =>
-            fakeAuth.isAuthenticated ? (
-                <Component {...props} />
-            ) : (
-                    <Redirect
-                        to={{
-                            pathname: "/login",
-                            state: {from: props.location}
-                        }}
-                    />
-                )
+        if (!token) {
+            return (<Redirect to={{
+                pathname: "/login", state: {from: this.props.location}
+            }} />);
+        } else {
+            return (<Route {...this.props} />);
         }
-    />
-);
+    }
+}
+
+export default PrivateRoute;
