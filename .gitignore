@@ -6,6 +6,7 @@ node_modules
 
 # testing
 coverage
+
 # production
 build
 .netlify
@@ -16,7 +17,10 @@ npm-debug.log
 package-lock.json
 yarn.lock
 
-#IDE
+# IDE
 .idea/*
 *.swp
 .vscode
+
+# React app
+src/*.css
