@@ -3,10 +3,20 @@ const jwt = require('jsonwebtoken');
 
 const auth = {
     async signup(parent, args, ctx, info) {
-        const password = await bcrypt.hash(args.password, 10)
+        const {name, email, password} = args;
+
+        if (!name) throw new Error('Name is required');
+        if (!email) throw new Error('Email is required');
+        if (!password) throw new Error('Password is required');
+
+        const checkUser = await ctx.db.query.user({where: {email}});
+        if (!!checkUser) throw new Error('The email is in use');
+
+        const safePassword = await bcrypt.hash(password, 10)
+
         const user = await ctx.db.mutation.createUser({
-            data: {...args, password},
-        })
+            data: {name, email, password: safePassword},
+        });
 
         return {
             token: jwt.sign({userId: user.id}, process.env.APP_SECRET),
