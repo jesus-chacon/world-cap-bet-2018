@@ -4,15 +4,18 @@ import {graphql, compose} from 'react-apollo';
 import gql from 'graphql-tag';
 
 import {AUTH_TOKEN} from '../constants/constants';
-import '../styles/loginPage.css';
 
 class SignupPage extends Component {
-    state = {
-        name: '',
-        email: '',
-        password: '',
-        confPassword: '',
-        errorPassword: false
+    constructor() {
+        super();
+
+        state = {
+            name: '',
+            email: '',
+            password: '',
+            confPassword: '',
+            errorPassword: false
+        };
     }
 
     render() {
@@ -77,7 +80,7 @@ class SignupPage extends Component {
         )
     }
 
-    _signup = async () => {
+    async _signup() {
         const {name, email, password, confPassword} = this.state;
 
         if (password.trim().length === 0 || password !== confPassword) {
@@ -94,8 +97,8 @@ class SignupPage extends Component {
         }
     }
 
-    _saveUserData = token => {
-        localStorage.setItem(AUTH_TOKEN, token);
+    _saveUserData(token) {
+        localStorage.setItem(AUTH_TOKEN, token)
     }
 }
 

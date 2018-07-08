@@ -4,13 +4,16 @@ import {graphql, compose} from 'react-apollo';
 import gql from 'graphql-tag';
 
 import {AUTH_TOKEN} from '../constants/constants';
-import '../styles/loginPage.css';
 
 class LoginPage extends Component {
-    state = {
-        email: '',
-        password: ''
-    };
+    constructor() {
+        super();
+
+        this.state = {
+            email: '',
+            password: ''
+        };
+    }
 
     render() {
         return (
@@ -51,7 +54,7 @@ class LoginPage extends Component {
         );
     }
 
-    _login = async () => {
+    async _login() {
         const {email, password} = this.state
 
         const result = await this.props.loginMutation({
@@ -64,7 +67,7 @@ class LoginPage extends Component {
         this.props.history.push(`/`);
     };
 
-    _saveUserData = token => {
+    _saveUserData(token) {
         localStorage.setItem(AUTH_TOKEN, token);
     }
 }

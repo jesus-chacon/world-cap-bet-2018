@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import React, {Fragment} from 'react';
 import ReactDOM from 'react-dom';
 import {
@@ -12,10 +14,7 @@ import {setContext} from 'apollo-link-context';
 
 import {AUTH_TOKEN} from './constants/constants';
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/flag-icon-css/css/flag-icon.min.css';
-
-import './index.css';
+import './scss/styles.scss';
 
 // PAGES
 import loginPage from './pages/loginPage';
