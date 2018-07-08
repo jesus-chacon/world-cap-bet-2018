@@ -9,7 +9,7 @@ class SignupPage extends Component {
     constructor() {
         super();
 
-        state = {
+        this.state = {
             name: '',
             email: '',
             password: '',
@@ -22,7 +22,7 @@ class SignupPage extends Component {
         return (
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-xs-10 col-sm-8 col-md-6 col-lg-4">
+                    <div className="col-xs-10 col-sm-8 col-md-6">
                         <div className="card login-card">
                             <h5 className="card-header">Login</h5>
 
