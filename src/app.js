@@ -18,9 +18,9 @@ import {AUTH_TOKEN} from './constants/constants';
 import './scss/styles.scss';
 
 // PAGES
-import loginPage from './pages/loginPage';
-import signupPage from './pages/signupPage';
-import mainPage from './pages/mainPage';
+import loginPage from './pages/public/login';
+import signupPage from './pages/public/signup';
+import mainPage from './pages/private/main';
 
 // COMPONENTS
 import PrivateRoute from './components/privateRoute';
