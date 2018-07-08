@@ -11,8 +11,7 @@ class Main extends Component {
 
         this.state = {
             groups: ['', '', '', '', '', '', '', ''],
-            availableOptions: [],
-            countries: []
+            availableOptions: []
         }
     }
 
@@ -37,18 +36,12 @@ class Main extends Component {
             </div>);
         }
 
-        const countries = this.props.countriesQuery.countries;
-
-        this.setState({countries});
-        this._reloadAvailableCountries(-1, []);
-
-
         return (
             <div className="container">
                 <div className="row">
                     {([0, 1, 2, 3, 4, 5, 6, 7]).map(index => (
                         <Group
-                            key={index}
+                            key={index.toString()}
                             index={index}
                             options={this.state.availableOptions}
                             handleChangeCountry={this._reloadAvailableCountries.bind(this)}
@@ -61,7 +54,7 @@ class Main extends Component {
 
     _reloadAvailableCountries(index, selectedCountries) {
         if (index === -1) {
-            this.setState({availableOptions: this.state.countries});
+            this.setState({availableOptions: this.props.countriesQuery.countries});
         } else {
             let currentSelection = this.state.groups;
 
@@ -69,6 +62,12 @@ class Main extends Component {
 
             //TODO
         }
+    }
+
+    componentWillMount() {
+        console.log('Did');
+        console.log(this.props.countriesQuery.countries);
+        //this._reloadAvailableCountries(-1, []);
     }
 }
 
