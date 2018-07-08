@@ -8,10 +8,16 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
     plugins: [htmlPlugin],
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
+        publicPath: '/'
+    },
     // Setup server
     devServer: {
         inline: true,
-        port: 8081
+        port: 8081,
+        historyApiFallback: true,
     },
     module: {
         // JS, JSX and SASS loaders
