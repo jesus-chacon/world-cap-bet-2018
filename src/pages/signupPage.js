@@ -68,7 +68,7 @@ class SignupPage extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <button className="btn btn-primary" onClick={this._signup}>Signup</button>
+                                    <button className="btn btn-primary" onClick={this._signup.bind(this)}>Signup</button>
                                 </div>
 
                                 <Link to="/">I have account</Link>
@@ -98,7 +98,7 @@ class SignupPage extends Component {
     }
 
     _saveUserData(token) {
-        localStorage.setItem(AUTH_TOKEN, token)
+        localStorage.setItem(AUTH_TOKEN, token);
     }
 }
 

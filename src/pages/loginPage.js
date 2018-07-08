@@ -42,7 +42,7 @@ class LoginPage extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <button className="btn btn-primary" onClick={this._login} >Login</button>
+                                    <button className="btn btn-primary" onClick={this._login.bind(this)} >Login</button>
                                 </div>
 
                                 <Link to="/signup">I not have account yet</Link>
@@ -55,7 +55,7 @@ class LoginPage extends Component {
     }
 
     async _login() {
-        const {email, password} = this.state
+        const {email, password} = this.state;
 
         const result = await this.props.loginMutation({
             variables: {email, password},
