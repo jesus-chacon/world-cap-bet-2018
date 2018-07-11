@@ -40,6 +40,6 @@ const auth = {
             user,
         }
     },
-}
+};
 
-module.exports = {auth};
+module.exports = auth;
