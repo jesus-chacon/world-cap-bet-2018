@@ -1,8 +1,10 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/flag-icon-css/css/flag-icon.min.css';
+
 @import 'variables';
 
 @import 'loginPage';
-
 @import 'index';
 
-@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../../node_modules/flag-icon-css/css/flag-icon.min.css';
+/* Components */
+@import './components/_group';

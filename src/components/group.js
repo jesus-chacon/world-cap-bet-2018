@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Select from './select';
 
-class Loading extends Component {
+class Group extends Component {
     constructor() {
         super();
 
@@ -16,23 +16,35 @@ class Loading extends Component {
 
         return (
             <div className="group">
-                <h2 className="group__title text-center">{this.props.title}</h2>
+                <h3 className="group__title text-center">Group: {this.props.title}</h3>
 
                 <div className="group__body">
                     {([0, 1, 2, 3]).map(index => (
-                        <Select
-                            value={selectedCountries[index]}
-                            onChange={this.handleChangeCountry.bind(this)}
-                            options={this.props.options} />
+                        <div key={index}>
+                            <div className="form-group align-items-center">
+                                <label>{index + 1}.</label>
+
+                                <Select
+                                    index={index}
+                                    value={selectedCountries[index]}
+                                    onChange={this._handleChangeCountry.bind(this)}
+                                    options={this.props.options} />
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>
         )
     }
 
-    handleChangeCountry() {
-        this.props.handleChangeCountry(this.props.index, this.state.selectedCountries);
+    _handleChangeCountry(index, value) {
+        let selectedCountries = this.state.selectedCountries;
+        selectedCountries[index] = value;
+
+        this.setState({selectedCountries});
+
+        this.props.handleChangeCountry(this.props.index, selectedCountries);
     }
 };
 
-export default Loading;
+export default Group;

@@ -1,0 +1,18 @@
+.group {
+    margin: $margin-default 0;
+    padding: $margin-default;
+    border: 1px solid $gray-base;
+    border-radius: 3px;
+    background-color: white;
+
+    &__body {
+        .form-group {
+            display: inline-flex;
+
+            label {
+                margin-right: $margin-default/2;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
