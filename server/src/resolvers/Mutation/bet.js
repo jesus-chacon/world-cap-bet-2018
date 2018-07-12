@@ -1,6 +1,5 @@
 const _ = require('lodash');
 const Q = require('q');
-const Moment = require('moment');
 
 const {getUserId} = require('../../utils');
 
@@ -27,7 +26,7 @@ async function checkListOfCountries(ctx, countries, length) {
     _.remove(countries, country => !country || country.trim().length == 0);
     countries = _.uniq(countries);
 
-    if (countries.length != length) throw new Error('The groups selected are invalid');
+    if (countries.length != length) throw new Error(`The countries selected are invalid ${length} ${countries.length}`);
 
     let checks = await Q.all(_.map(countries, id => ctx.db.exists.Country({id})));
     let noValid = _.remove(checks, check => !check);
@@ -46,25 +45,52 @@ function createCountriesList(ctx, ids, name) {
     return ctx.db.mutation.createCountriesList({data}, '{id}');
 }
 
+async function prepareRound(ctx, countries, roundName, totalCountries) {
+    await checkListOfCountries(ctx, countries, totalCountries);
+
+    const list = await createCountriesList(ctx, countries, roundName);
+
+    return {connect: list};
+}
+
+async function prepareGroups(ctx, groups) {
+    if (groups.length != 8) throw new Error('The number of groups is wrong');
+
+    let selection = [];
+    _.forEach(groups, group => {selection = _.concat(selection, group)});
+
+    return prepareRound(ctx, selection, 'Groups', 32);
+}
+
 const bet = {
-    async addGroupsToBet(parent, args, ctx, info) {
-        const {groups} = args;
+    async addInfoToBet(parent, args, ctx, info) {
+        const {groups, round8, round4, round2, final} = args;
         const bet = await ensureBet(ctx);
+        let data = {};
 
-        if (groups.length != 8) throw new Error('The number of groups is wrong');
+        if (!!groups) {
+            data.groups = await prepareGroups(ctx, groups);
+        }
 
-        let selection = [];
-        _.forEach(groups, group => {selection = _.concat(selection, group)});
+        if (!!round8) {
+            data.round8 = await prepareRound(ctx, round8, 'Round 8', 16);
+        }
 
-        await checkListOfCountries(ctx, selection, 32);
+        if (!!round4) {
+            data.round4 = await prepareRound(ctx, round4, 'Round 4', 8);
+        }
 
-        let list = await createCountriesList(ctx, selection, 'groups');
+        if (!!round2) {
+            data.round2 = await prepareRound(ctx, round2, 'Round 2', 4);
+        }
+
+        if (!!final) {
+            data.final = await prepareRound(ctx, final, 'Final', 2);
+        }
 
         return ctx.db.mutation.updateBet({
             where: bet,
-            data: {
-                groups: {connect: list}
-            }
+            data
         }, info);
     }
 };
