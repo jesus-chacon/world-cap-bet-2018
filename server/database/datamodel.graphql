@@ -43,7 +43,7 @@ type Bet {
     isValid: Boolean @default(value: false)
     topGoalScorer: Player @relation(name: "TopGoalScorer")
     secondGoalScorer: Player @relation(name: "SecondGoalScorer")
-    groups: [CountriesList!]! @relation(name: "Groups")
+    groups: CountriesList @relation(name: "Groups")
     round8: CountriesList @relation(name: "Round8")
     round4: CountriesList @relation(name: "Round4")
     round2: CountriesList @relation(name: "Round2")
