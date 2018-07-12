@@ -32,6 +32,7 @@ type Player {
 type CountriesList {
     id: ID! @unique
     name: String!
+    createdAt: DateTime!
     countries: [Country!]!
 }
 
