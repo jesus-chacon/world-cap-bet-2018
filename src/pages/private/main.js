@@ -40,11 +40,13 @@ class Main extends Component {
             );
         }
 
+        const countries = this.props.countriesQuery.countries;
+
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <h1>1. Select the countries for every group</h1>
+                        <h2>1. Select the countries for every group</h2>
                     </div>
 
                     {(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']).map((title, index) => (
@@ -52,8 +54,11 @@ class Main extends Component {
                             <Group
                                 title={title}
                                 index={index}
-                                options={this.state.countries}
-                                handleChangeCountry={this._reloadAvailableCountries.bind(this)}
+                                options={countries}
+                                previousSelection={this.state.groups[index]}
+                                handleChangeCountry={(index, countryId) => {
+                                    this._reloadAvailableCountriesForRound.bind(this)('round8', index, countryId);
+                                }}
                             />
                         </div>
                     ))}
