@@ -1,0 +1,21 @@
+.round {
+    @extend .group;
+
+    &__body {
+        .form-group {
+            padding: 0 $margin-default;
+            margin: $margin-default 0;
+            display: flex;
+            flex-grow: 1;
+            max-width: 33%;
+
+            label {
+                width: 25px;
+            }
+            
+            .form-control {
+                flex-grow: 1;
+            }
+        }
+    } 
+}
