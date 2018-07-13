@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import Loading from '../../components/loading';
 import Group from '../../components/group';
+import Round from '../../components/round';
 
 class Main extends Component {
     constructor() {
@@ -65,7 +66,7 @@ class Main extends Component {
                 </div>
 
                 {
-                    this._totalSelection() == 32 && !this._isValidSelection() &&
+                    this._totalGroupSelection() == 32 && !this._isValidGroupSelection() &&
 
                     <div className="row">
                         <div className="col-12">
@@ -73,16 +74,93 @@ class Main extends Component {
                         </div>
                     </div>
                 }
+
+                {
+                    this._isValidGroupSelection() &&
+
+                    <div className="row">
+                        <div className="col-12">
+                            <h2>2. Select the 8th round</h2>
+                        </div>
+
+                        <div className="col-12">
+                            <Round
+                                maximunSelection={16}
+                                previousSelection={this.state.round8}
+                                options={this._getRound8AvailableCountries.bind(this)()}
+                                handleChangeCountry={((selectedCountries) => {
+                                    this._reloadSelectedCountriesForRound.bind(this)('round8', selectedCountries);
+                                }).bind(this)}
+                            />
+                        </div>
+                    </div>
+                }
+
+                {
+                    this._isValidGroupSelection() && this._isValidSelection(this.state.round8, 16) &&
+
+                    <div className="row">
+                        <div className="col-12">
+                            <h2>3. Select the 4th round</h2>
+                        </div>
+
+                        <div className="col-12">
+                            <Round
+                                maximunSelection={8}
+                                previousSelection={this.state.round4}
+                                options={this._getRoundAvailableCountries.bind(this)(this.state.round8)}
+                                handleChangeCountry={((selectedCountries) => {
+                                    this._reloadSelectedCountriesForRound.bind(this)('round4', selectedCountries);
+                                }).bind(this)}
+                            />
+                        </div>
+                    </div>
+                }
+
+                {
+                    this._isValidGroupSelection() && this._isValidSelection(this.state.round4, 8) &&
+
+                    <div className="row">
+                        <div className="col-12">
+                            <h2>4. Select the 2th round</h2>
+                        </div>
+
+                        <div className="col-12">
+                            <Round
+                                maximunSelection={4}
+                                previousSelection={this.state.round2}
+                                options={this._getRoundAvailableCountries.bind(this)(this.state.round4)}
+                                handleChangeCountry={((selectedCountries) => {
+                                    this._reloadSelectedCountriesForRound.bind(this)('round2', selectedCountries);
+                                }).bind(this)}
+                            />
+                        </div>
+                    </div>
+                }
+
+                {
+                    this._isValidGroupSelection() && this._isValidSelection(this.state.round2, 4) &&
+
+                    <div className="row">
+                        <div className="col-12">
+                            <h2>5. Select the final round</h2>
+                        </div>
+
+                        <div className="col-12">
+                            <Round
+                                maximunSelection={2}
+                                previousSelection={this.state.final}
+                                options={this._getRoundAvailableCountries.bind(this)(this.state.round2)}
+                                handleChangeCountry={((selectedCountries) => {
+                                    this._reloadSelectedCountriesForRound.bind(this)('roundfinal', selectedCountries);
+                                }).bind(this)}
+                            />
+                        </div>
+                    </div>
+                }
+                <button type="button" className="btn btn-primary" onClick={this._save.bind(this)}>Save Bet</button>
             </div>
         );
-    }
-
-    componentWillReceiveProps() {
-        if (!!this.props.countriesQuery.countries && this.props.countriesQuery.countries.length > 0) {
-            const countries = this.props.countriesQuery.countries;
-
-            this.setState({countries: countries});
-        }
     }
 
     _reloadAvailableCountries(index, selectedCountries) {
@@ -93,7 +171,17 @@ class Main extends Component {
         this.setState({groups: currentSelection});
     }
 
-    _isValidSelection() {
+    _isValidSelection(countries, total) {
+        /* Remove empty selection */
+        _.remove(countries, id => (!id || id.trim().length == 0));
+
+        /* Remove duplicates */
+        countries = _.uniq(countries);
+
+        return countries.length == total;
+    }
+
+    _isValidGroupSelection() {
         let selectionList = [];
 
         /* Join selections */
@@ -101,16 +189,10 @@ class Main extends Component {
             selectionList = _.concat(selectionList, group);
         });
 
-        /* Remove empty selection */
-        _.remove(selectionList, id => (!id || id.trim().length == 0));
-
-        /* Remove duplicates */
-        selectionList = _.uniq(selectionList);
-
-        return selectionList.length == 32;
+        return this._isValidSelection(selectionList, 32);
     }
 
-    _totalSelection() {
+    _totalGroupSelection() {
         let selectionList = [];
 
         _.forEach(this.state.groups, group => {
@@ -119,8 +201,35 @@ class Main extends Component {
 
         _.remove(selectionList, id => (!id || id.trim().length == 0));
 
-
         return selectionList.length;
+    }
+
+    _getRound8AvailableCountries() {
+        let availableCountries = [];
+
+        for (let i = 0; i < this.state.groups.length; i++) {
+            for (let j = 0; j < 2; j++) {
+                availableCountries.push(this.state.groups[i][j]);
+            }
+        }
+
+        return this._getRoundAvailableCountries(availableCountries);
+    }
+
+    _getRoundAvailableCountries(previousSelection) {
+        return _.map(previousSelection, countryId => _.find(this.props.countriesQuery.countries, ({id}) => id === countryId));
+    }
+
+    _reloadSelectedCountriesForRound(roundProp, selectedCountries) {
+        let updateState = {};
+
+        updateState[roundProp] = selectedCountries;
+
+        this.setState(updateState);
+    }
+
+    _save() {
+        console.log('Holis');
     }
 }
 
