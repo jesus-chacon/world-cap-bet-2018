@@ -12,8 +12,11 @@ class Main extends Component {
 
         this.state = {
             groups: [[], [], [], [], [], [], [], []],
-            countries: [],
-        }
+            round8: [],
+            round4: [],
+            round2: [],
+            final: []
+        };
     }
 
     render() {
