@@ -11,6 +11,12 @@ class Group extends Component {
         }
     }
 
+    componentWillMount() {
+        if (!!this.props.previousSelection && this.props.previousSelection.length > 0) {
+            this.setState({selectedCountries: this.props.previousSelection});
+        }
+    }
+
     render() {
         let selectedCountries = this.state.selectedCountries;
 
