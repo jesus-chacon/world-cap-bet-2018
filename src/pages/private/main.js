@@ -152,7 +152,51 @@ class Main extends Component {
                                 previousSelection={this.state.final}
                                 options={this._getRoundAvailableCountries.bind(this)(this.state.round2)}
                                 handleChangeCountry={((selectedCountries) => {
-                                    this._reloadSelectedCountriesForRound.bind(this)('roundfinal', selectedCountries);
+                                    this._reloadSelectedCountriesForRound.bind(this)('final', selectedCountries);
+                                }).bind(this)}
+                            />
+                        </div>
+                    </div>
+                }
+
+                {
+                    this._isValidGroupSelection() && this._isValidSelection(this.state.final, 2) &&
+
+                    <div className="row">
+                        <div className="col-12">
+                            <h2>6. Select the winner</h2>
+                        </div>
+
+                        <div className="col-12">
+                            <Round
+                                maximunSelection={1}
+                                title="Winner"
+                                previousSelection={this.state.final}
+                                options={this._getRoundAvailableCountries.bind(this)(this.state.final)}
+                                handleChangeCountry={((selectedCountries) => {
+                                    this._reloadSelectedCountriesForRound.bind(this)('winner', selectedCountries);
+                                }).bind(this)}
+                            />
+                        </div>
+                    </div>
+                }
+
+                {
+                    this._isValidGroupSelection() && this._isValidSelection(this.state.winner, 1) &&
+
+                    <div className="row">
+                        <div className="col-12">
+                            <h2>7. Select the third</h2>
+                        </div>
+
+                        <div className="col-12">
+                            <Round
+                                maximunSelection={1}
+                                title="thind"
+                                previousSelection={this.state.third}
+                                options={_.difference(this._getRoundAvailableCountries.bind(this)(this.state.round2), this.state.final)}
+                                handleChangeCountry={((selectedCountries) => {
+                                    this._reloadSelectedCountriesForRound.bind(this)('third', selectedCountries);
                                 }).bind(this)}
                             />
                         </div>
@@ -172,13 +216,14 @@ class Main extends Component {
     }
 
     _isValidSelection(countries, total) {
+        let countriesCopy = [...countries];
         /* Remove empty selection */
-        _.remove(countries, id => (!id || id.trim().length == 0));
+        _.remove(countriesCopy, id => (!id || id.trim().length == 0));
 
         /* Remove duplicates */
-        countries = _.uniq(countries);
+        countriesCopy = _.uniq(countriesCopy);
 
-        return countries.length == total;
+        return countriesCopy.length == total;
     }
 
     _isValidGroupSelection() {

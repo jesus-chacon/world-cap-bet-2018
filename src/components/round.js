@@ -13,7 +13,7 @@ class Round extends Component {
     }
 
     componentWillMount() {
-        let selectedCountries = _.times(this.props.maximunSelection, _.constant('sampleId'));
+        let selectedCountries = _.times(this.props.maximunSelection, _.constant(''));
 
         if (!!this.props.previousSelection && this.props.previousSelection.length > 0) {
             this.props.previousSelection.forEach((id, index) => {
@@ -21,7 +21,6 @@ class Round extends Component {
             });
         }
 
-        console.log(selectedCountries);
         this.setState({selectedCountries});
     }
 
