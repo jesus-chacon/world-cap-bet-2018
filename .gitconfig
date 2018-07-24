@@ -1,0 +1,2 @@
+[alias]
+    reauthor = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author=$2\" $1' --
