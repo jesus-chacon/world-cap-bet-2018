@@ -4,19 +4,19 @@
     "description": "App for World Cap betting sistem for 2018",
     "main": "index.js",
     "dependencies": {
-        "apollo-boost": "0.1.9",
-        "apollo-cache-inmemory": "^1.2.4",
+        "apollo-boost": "0.1.12",
+        "apollo-cache-inmemory": "^1.2.6",
         "apollo-link-context": "^1.0.8",
-        "bootstrap": "^4.1.1",
+        "bootstrap": "^4.1.3",
         "flag-icon-css": "^3.0.0",
         "graphql": "0.13.2",
-        "react": "16.4.1",
-        "react-apollo": "2.1.5",
-        "react-dom": "16.4.1",
-        "react-modal": "3.4.5",
+        "react": "16.4.2",
+        "react-apollo": "2.1.9",
+        "react-dom": "16.4.2",
+        "react-modal": "3.5.1",
         "react-router-dom": "4.3.1",
         "react-scripts": "^1.1.4",
-        "react-spinners": "^0.3.2"
+        "react-spinners": "^0.3.3"
     },
     "scripts": {
         "start": "webpack --mode development",
@@ -54,11 +54,11 @@
         "html-webpack-plugin": "^3.2.0",
         "image-webpack-loader": "^4.3.1",
         "node-sass": "^4.9.2",
-        "react-hot-loader": "^4.3.3",
-        "sass-loader": "^7.0.3",
+        "react-hot-loader": "^4.3.4",
+        "sass-loader": "^7.1.0",
         "style-loader": "^0.21.0",
-        "webpack": "^4.15.1",
-        "webpack-cli": "^3.0.8",
-        "webpack-dev-server": "^3.1.4"
+        "webpack": "^4.16.4",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.5"
     }
 }
