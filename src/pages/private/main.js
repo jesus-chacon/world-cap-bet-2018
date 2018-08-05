@@ -57,8 +57,8 @@ class Main extends Component {
                                 index={index}
                                 options={countries}
                                 previousSelection={this.state.groups[index]}
-                                handleChangeCountry={(index, countryId) => {
-                                    this._reloadAvailableCountriesForRound.bind(this)('round8', index, countryId);
+                                handleChangeCountry={(selectedCountries) => {
+                                    this._reloadSelectedCountriesForGroups.bind(this)(index, selectedCountries);
                                 }}
                             />
                         </div>
@@ -263,6 +263,14 @@ class Main extends Component {
 
     _getRoundAvailableCountries(previousSelection) {
         return _.map(previousSelection, countryId => _.find(this.props.countriesQuery.countries, ({id}) => id === countryId));
+    }
+
+    _reloadSelectedCountriesForGroups(index, selectedCountries) {
+        let currentsGroups = this.state.groups;
+
+        currentsGroups[index] = selectedCountries;
+
+        this.setState({groups: currentsGroups});
     }
 
     _reloadSelectedCountriesForRound(roundProp, selectedCountries) {
