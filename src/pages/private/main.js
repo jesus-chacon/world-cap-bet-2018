@@ -204,17 +204,10 @@ class Main extends Component {
                         </div>
                     </div>
                 }
+
                 <button type="button" className="btn btn-primary" onClick={this._save.bind(this)}>Save Bet</button>
             </div>
         );
-    }
-
-    _reloadAvailableCountries(index, selectedCountries) {
-        let currentSelection = this.state.groups;
-
-        currentSelection[index] = selectedCountries;
-
-        this.setState({groups: currentSelection});
     }
 
     _isValidSelection(countries, total) {
