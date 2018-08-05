@@ -280,8 +280,17 @@ class Main extends Component {
         this.setState(updateState);
     }
 
-    _save() {
-        console.log('Holis');
+    async _save() {
+        let data = {...this.state};
+
+        /* Prepare bet to save */
+        data.winner = data.winner[0];
+        data.third = data.third[0];
+
+        /* Save bet */
+        const result = await this.props.saveBet({
+            variables: {...data}
+        });
     }
 }
 
