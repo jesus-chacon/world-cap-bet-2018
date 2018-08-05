@@ -16,7 +16,9 @@ class Main extends Component {
             round8: [],
             round4: [],
             round2: [],
-            final: []
+            final: [],
+            winner: [],
+            third: []
         };
     }
 
