@@ -211,14 +211,18 @@ class Main extends Component {
     }
 
     _isValidSelection(countries, total) {
-        let countriesCopy = [...countries];
-        /* Remove empty selection */
-        _.remove(countriesCopy, id => (!id || id.trim().length == 0));
+        if (!countries || countries.length == 0) {
+            return false;
+        } else {
+            let countriesCopy = [...countries];
+            /* Remove empty selection */
+            _.remove(countriesCopy, id => (!id || id.trim().length == 0));
 
-        /* Remove duplicates */
-        countriesCopy = _.uniq(countriesCopy);
+            /* Remove duplicates */
+            countriesCopy = _.uniq(countriesCopy);
 
-        return countriesCopy.length == total;
+            return countriesCopy.length == total;
+        }
     }
 
     _isValidGroupSelection() {
