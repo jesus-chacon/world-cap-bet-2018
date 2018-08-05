@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {graphql} from 'react-apollo';
+import {graphql, compose} from 'react-apollo';
 import gql from 'graphql-tag';
 import _ from 'lodash';
 
@@ -293,5 +293,24 @@ const COUNTRIES_FEED = gql`
             flag
         }
     }
-`
-export default graphql(COUNTRIES_FEED, {name: 'countriesQuery'})(Main);
+`;
+
+const ADD_INFO_TO_BET_MUTATION = gql`
+  mutation AddInfoToBetMutation(
+      $groups: [[String]], 
+      $round8: [String], 
+      $round4: [String], 
+      $round2: [String], 
+      $final: [String],
+      $winner: String,
+      $third: String) {
+    addInfoToBet(groups: $groups, round8: $round8, round4: $round4, round2: $round2, final: $final, winner: $winner, third: $third) {
+      id
+    }
+  }
+`;
+
+export default compose(
+    graphql(COUNTRIES_FEED, {name: 'countriesQuery'}),
+    graphql(ADD_INFO_TO_BET_MUTATION, {name: 'saveBet'})
+)(Main);
