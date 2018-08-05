@@ -8,6 +8,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
     plugins: [htmlPlugin],
+    devtool: 'cheap-module-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
