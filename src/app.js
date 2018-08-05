@@ -25,22 +25,21 @@ import mainPage from './pages/private/main';
 // COMPONENTS
 import PrivateRoute from './components/privateRoute';
 
-const authLink = setContext((_, {headers}) => {
-    // get the authentication token from local storage if it exists
-    const token = localStorage.getItem(AUTH_TOKEN);
-    // return the headers to the context so httpLink can read them
-    return {
-        headers: {
-            ...headers,
-            authorization: token ? `Bearer ${token}` : "",
-        }
-    }
-});
-
 const client = new ApolloClient({
-    link: authLink,
     cache: new InMemoryCache(),
-    uri: 'http://localhost:4000'
+    uri: 'http://localhost:4000',
+    fetchOptions: {
+        credentials: 'include'
+    },
+    request: async (operation) => {
+        const token = localStorage.getItem(AUTH_TOKEN);
+
+        operation.setContext({
+            headers: {
+                authorization: token ? `Bearer ${token}` : ""
+            }
+        });
+    },
 });
 
 const App = () => (<ApolloProvider client={client}>
