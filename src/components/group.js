@@ -49,7 +49,7 @@ class Group extends Component {
 
         this.setState({selectedCountries});
 
-        this.props.handleChangeCountry(this.props.index, selectedCountries);
+        this.props.handleChangeCountry(selectedCountries);
     }
 };
 
