@@ -94,6 +94,14 @@ const bet = {
             data.final = await prepareRound(ctx, final, 'Final', 2);
         }
 
+        if (!!winner) {
+            data.winner = await prepareCountry(ctx, winner);
+        }
+
+        if (!!third) {
+            data.third = await prepareCountry(ctx, third);
+        }
+
         return ctx.db.mutation.updateBet({
             where: bet,
             data
