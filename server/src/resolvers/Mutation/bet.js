@@ -62,9 +62,15 @@ async function prepareGroups(ctx, groups) {
     return prepareRound(ctx, selection, 'Groups', 32);
 }
 
+async function prepareCountry(ctx, country) {
+    await checkListOfCountries(ctx, [country], 1);
+
+    return {connect: {id: country}};
+}
+
 const bet = {
     async addInfoToBet(parent, args, ctx, info) {
-        const {groups, round8, round4, round2, final} = args;
+        const {groups, round8, round4, round2, final, winner, third} = args;
         const bet = await ensureBet(ctx);
         let data = {};
 
