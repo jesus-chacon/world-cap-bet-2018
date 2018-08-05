@@ -194,7 +194,7 @@ class Main extends Component {
                         <div className="col-12">
                             <Round
                                 maximunSelection={1}
-                                title="thind"
+                                title="Third"
                                 previousSelection={this.state.third}
                                 options={_.difference(this._getRoundAvailableCountries.bind(this)(this.state.round2), this.state.final)}
                                 handleChangeCountry={((selectedCountries) => {
