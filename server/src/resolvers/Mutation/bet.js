@@ -26,7 +26,7 @@ async function checkListOfCountries(ctx, countries, length) {
     _.remove(countries, country => !country || country.trim().length == 0);
     countries = _.uniq(countries);
 
-    if (countries.length != length) throw new Error(`The countries selected are invalid ${length} ${countries.length}`);
+    if (countries.length != length) throw new Error("The countries selected are invalid");
 
     let checks = await Q.all(_.map(countries, id => ctx.db.exists.Country({id})));
     let noValid = _.remove(checks, check => !check);
