@@ -16,7 +16,7 @@ async function ensureBet(ctx) {
             data: {bet: {connect: createBet}}
         }, '{id}');
 
-        bet = createBet.id;
+        bet = {id: createBet.id};
     }
 
     return bet;
