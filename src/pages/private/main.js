@@ -173,7 +173,7 @@ class Main extends Component {
                             <Round
                                 maximunSelection={1}
                                 title="Winner"
-                                previousSelection={this.state.final}
+                                previousSelection={this.state.winner}
                                 options={this._getRoundAvailableCountries.bind(this)(this.state.final)}
                                 handleChangeCountry={((selectedCountries) => {
                                     this._reloadSelectedCountriesForRound.bind(this)('winner', selectedCountries);
