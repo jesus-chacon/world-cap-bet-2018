@@ -9,7 +9,7 @@ type Query {
 type Mutation {
     signup(email: String!, password: String!, name: String!): AuthPayload!
     login(email: String!, password: String!): AuthPayload!
-    addInfoToBet(groups: [[String]], round8: [String], round4: [String], round2: [String], final: [String]): Bet
+    addInfoToBet(groups: [[String]], round8: [String], round4: [String], round2: [String], final: [String], winner: String, third: String): Bet
 }
 
 type AuthPayload {
