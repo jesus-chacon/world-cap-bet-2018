@@ -37,7 +37,11 @@ class Round extends Component {
                     {
                         selectedCountries.map((id, index) => (
                             <div className="form-group align-items-center" key={index}>
-                                <label>{index + 1}.</label>
+                                {
+                                    this.state.selectedCountries.length > 1 &&
+
+                                    <label>{index + 1}.</label>
+                                }
 
                                 <Select
                                     index={index}
